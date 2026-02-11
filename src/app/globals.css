@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Base Colors - Clean White/Gray base */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  /* Primary: Deep Green (Hípica/Nature) */
+  --primary: #1e3a2f; 
+  --primary-foreground: #ffffff;
+
+  /* Secondary: Gold/Bronze (Luxury) */
+  --secondary: #c5a059;
+  --secondary-foreground: #ffffff;
+
+  /* Accent: Lighter Green */
+  --accent: #f0fdf4;
+  --accent-foreground: #166534;
+
+  /* Muted/Neutral */
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+
+  /* Cards */
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+
+  /* Borders */
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #1e3a2f;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
