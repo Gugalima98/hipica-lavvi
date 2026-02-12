@@ -32,7 +32,7 @@ export const properties: Property[] = [
         bathrooms: 5,
         garages: 4,
         tower: "Torre A",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-a-276m.png", "/images/plantas/planta-276m-final-1-torre-A-opcao-1.jpg"],
         features: ["Hall Privativo", "Varanda Gourmet Integrada", "Closet Sr. e Sra.", "Dependência Completa", "Vista Panorâmica"],
         towerDetails: { floors: 43, unitsPerFloor: 4, elevators: "Social + Serviço", totalUnits: 172 }
     },
@@ -47,7 +47,7 @@ export const properties: Property[] = [
         bathrooms: 5,
         garages: 3,
         tower: "Torre A",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-a-180m.png", "/images/plantas/planta-180m-final-3-torre-A-opcao-1.jpg"],
         features: ["Hall Privativo", "Varanda Gourmet", "Lavabo", "Despensa", "Suíte Master com Closet"],
         towerDetails: { floors: 43, unitsPerFloor: 4, elevators: "Social + Serviço", totalUnits: 172 }
     },
@@ -63,7 +63,7 @@ export const properties: Property[] = [
         bathrooms: 4,
         garages: 2,
         tower: "Torre B",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-b-149m.png", "/images/plantas/planta-149m-final-6-torre-B-opcao-1.jpg"],
         features: ["Varanda Gourmet", "Hall Semiprivativo", "Lavabo", "Suíte Master com Closet"],
         towerDetails: { floors: 43, unitsPerFloor: 6, elevators: "Social + Serviço", totalUnits: 258 }
     },
@@ -78,7 +78,7 @@ export const properties: Property[] = [
         bathrooms: 4,
         garages: 2,
         tower: "Torre B",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-b-133m.png", "/images/plantas/planta-133m-final-5-torre-C-opcao-1.jpg"],
         features: ["Varanda Gourmet", "Lavabo", "Cozinha Americana (Opcional)", "Rouparia"],
         towerDetails: { floors: 43, unitsPerFloor: 6, elevators: "Social + Serviço", totalUnits: 258 }
     },
@@ -93,7 +93,7 @@ export const properties: Property[] = [
         bathrooms: 2,
         garages: 1,
         tower: "Torre B",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-b-84m.png", "/images/plantas/planta-84m-final-6-torre-C.jpg"],
         features: ["Varanda Integrada", "Opção 2 Suítes", "Lavabo", "Cozinha Moderna"],
         towerDetails: { floors: 43, unitsPerFloor: 6, elevators: "Social + Serviço", totalUnits: 258 }
     },
@@ -109,7 +109,7 @@ export const properties: Property[] = [
         bathrooms: 4,
         garages: 2,
         tower: "Torre C",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-c-170m.png", "/images/plantas/planta-170m-final-8-torre-C-opcao-1.jpg"],
         features: ["Varanda Gourmet", "Hall Semiprivativo", "Lavabo", "Área de Serviço Separada"],
         towerDetails: { floors: 43, unitsPerFloor: 8, elevators: "Social + Serviço", totalUnits: 344 }
     },
@@ -124,7 +124,7 @@ export const properties: Property[] = [
         bathrooms: 4,
         garages: 2,
         tower: "Torre C",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-c-133m.png", "/images/plantas/planta-133m-final-5-torre-C-opcao-2.jpg"],
         features: ["Varanda Gourmet", "Lavabo", "Suíte Master"],
         towerDetails: { floors: 43, unitsPerFloor: 8, elevators: "Social + Serviço", totalUnits: 344 }
     },
@@ -139,7 +139,7 @@ export const properties: Property[] = [
         bathrooms: 2,
         garages: 1,
         tower: "Torre C",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-c-84m.png", "/images/plantas/planta-84m-final-7-torre-C-opcao-1.jpg"],
         features: ["Varanda Integrada", "Compacto de Luxo", "Lavabo"],
         towerDetails: { floors: 43, unitsPerFloor: 8, elevators: "Social + Serviço", totalUnits: 344 }
     },
@@ -155,7 +155,7 @@ export const properties: Property[] = [
         bathrooms: 5,
         garages: 3,
         tower: "Torre D",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-d-223m.png", "/images/plantas/planta-223m-final-2-torre-D-opcao-1.jpg"],
         features: ["Hall Privativo", "Varanda Gourmet em L", "Suíte Master Ampliada", "Dependência de Serviço"],
         towerDetails: { floors: 43, unitsPerFloor: 4, elevators: "Social + Serviço", totalUnits: 172 }
     },
@@ -170,7 +170,7 @@ export const properties: Property[] = [
         bathrooms: 4,
         garages: 2,
         tower: "Torre D",
-        images: ["/images/hero-home.png"],
+        images: ["/images/torres/torre-d-184m.png", "/images/plantas/planta-184m-final-3-torre-D-opcao-1.jpg"],
         features: ["Hall Privativo", "Varanda Gourmet", "Lavabo", "Cozinha com Ventilação Natural"],
         towerDetails: { floors: 43, unitsPerFloor: 4, elevators: "Social + Serviço", totalUnits: 172 }
     },

@@ -13,7 +13,7 @@ export function AboutTeaser() {
                             Excelência e Alto Padrão em Cada Detalhe
                         </p>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            A Lavvi é referência no mercado de alto padrão em São Paulo, entregando projetos icônicos que valorizam a arquitetura, o design e o bem-estar. O Hípica Lavvi Residences é a síntese dessa expertise: um projeto visionário em uma localização inigualável.
+                            A Lavvi é referência no mercado de alto padrão em São Paulo, entregando projetos icônicos que valorizam a arquitetura, o design e o bem-estar. O Jardins da Hípica é a síntese dessa expertise: um projeto visionário em uma localização inigualável em frente à Hípica Santo Amaro, garantindo uma vista eterna e definitiva para o verde.
                         </p>
                         <div className="mt-8">
                             <Button asChild size="lg">
@@ -23,10 +23,13 @@ export function AboutTeaser() {
                     </div>
                     <div className="relative lg:h-full">
                         {/* Placeholder for About Image - In a real scenario, would generate another image */}
-                        <div className="relative aspect-[4/3] w-full rounded-xl bg-gray-100 object-cover shadow-xl ring-1 ring-gray-400/10 sm:aspect-[2/1] lg:aspect-auto lg:h-[500px]">
-                            <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200 rounded-xl">
-                                <span className="text-sm">Imagem do Empreendimento / Decorado</span>
-                            </div>
+                        <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl sm:aspect-[2/1] lg:aspect-auto lg:h-[500px]">
+                            <Image
+                                src="/images/perspectiva_ilustrada_do_transfer_lobby.webp"
+                                alt="Jardins da Hípica - Lobby de Transfer Sofisticado"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                     </div>
                 </div>

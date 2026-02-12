@@ -15,7 +15,7 @@ export function PropertyTeaser() {
         <section className="bg-[#050A14] py-24 sm:py-32 relative overflow-hidden">
             {/* Decorative background element - increased opacity */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 opacity-10 select-none pointer-events-none">
-                <span className="font-serif text-[400px] text-white leading-none">LV</span>
+                <span className="font-serif text-[400px] text-white leading-none">JH</span>
             </div>
 
             <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -35,7 +35,7 @@ export function PropertyTeaser() {
                         {units.map((unit) => (
                             <div key={unit.area} className="group relative flex flex-col overflow-hidden rounded-xl bg-white/5 p-8 transition-all duration-500 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/50 border border-white/10 hover:border-secondary/30 backdrop-blur-sm">
                                 <div className="absolute top-0 right-0 p-4 opacity-10 transition-opacity group-hover:opacity-20">
-                                    <span className="font-serif text-6xl text-secondary">LV</span>
+                                    <span className="font-serif text-6xl text-secondary">JH</span>
                                 </div>
                                 <dt className="text-3xl font-serif font-light text-white group-hover:text-secondary transition-colors">
                                     {unit.area}

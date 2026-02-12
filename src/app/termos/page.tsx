@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Termos de Uso | Hípica Lavvi Residences",
-    description: "Termos e condições de uso do site oficial Hípica Lavvi Residences.",
+    title: "Termos de Uso | Jardins da Hípica",
+    description: "Termos e condições de uso do site oficial Jardins da Hípica.",
 };
 export default function TermsPage() {
     return (
@@ -15,6 +15,9 @@ export default function TermsPage() {
                     <h2 className="text-xl font-semibold text-gray-900">1. Aceitação dos Termos</h2>
                     <p>Ao acessar e utilizar este site, você concorda em cumprir e estar vinculado aos seguintes termos e condições de uso.</p>
 
+                    <p className="mt-6 text-lg leading-8 text-gray-600">
+                        Ao acessar ao site <a href="https://jardinsdahipica.com.br" className="text-secondary hover:underline">Jardins da Hípica</a>, concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.
+                    </p>
                     <h2 className="text-xl font-semibold text-gray-900">2. Uso do Site</h2>
                     <p>O conteúdo deste site é para sua informação geral e uso pessoal apenas. Ele está sujeito a alterações sem aviso prévio. As imagens apresentadas são meramente ilustrativas e o projeto poderá sofrer alterações.</p>
 

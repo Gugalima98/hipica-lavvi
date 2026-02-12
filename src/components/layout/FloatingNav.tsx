@@ -51,8 +51,8 @@ export function FloatingNav() {
 
                         {/* Logo Compacto */}
                         <Link href="/" className="flex items-center gap-2 pr-4 border-r border-white/10">
-                            <span className="font-serif text-xl font-bold tracking-tighter text-white">
-                                LV
+                            <span className="font-serif text-lg font-bold tracking-tighter text-white">
+                                Jardins da Hípica
                             </span>
                         </Link>
 
@@ -81,7 +81,7 @@ export function FloatingNav() {
                                 className="hidden md:flex rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg shadow-secondary/20"
                                 asChild
                             >
-                                <Link href="/contato">
+                                <Link href="https://wa.me/5511978519899?text=Olá, gostaria de entrar na Lista VIP do Jardins da Hípica." target="_blank">
                                     Lista VIP
                                 </Link>
                             </Button>
@@ -121,7 +121,7 @@ export function FloatingNav() {
                             className="mt-8 w-full rounded-full bg-secondary text-secondary-foreground"
                             asChild
                         >
-                            <Link href="/contato" onClick={() => setIsMobileMenuOpen(false)}>
+                            <Link href="https://wa.me/5511978519899?text=Olá, gostaria de entrar na Lista VIP do Jardins da Hípica." target="_blank" onClick={() => setIsMobileMenuOpen(false)}>
                                 Entrar na Lista VIP
                             </Link>
                         </Button>

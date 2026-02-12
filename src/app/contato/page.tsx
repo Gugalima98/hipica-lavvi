@@ -3,8 +3,8 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Contato | Agende sua Visita - Hípica Lavvi Residences",
-    description: "Entre em contato com a equipe de vendas oficial do Hípica Lavvi. Agende sua visita ao decorado ou solicite a tabela de preços.",
+    title: "Contato e Agendamentos | Jardins da Hípica",
+    description: "Agende sua visita ao decorado do Jardins da Hípica ou fale com nossos especialistas.",
 };
 export default function ContactPage() {
     return (
@@ -32,7 +32,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-lg text-gray-900">Telefone / WhatsApp</h3>
-                                            <p className="text-gray-600">(11) 99999-9999</p>
+                                            <p className="text-gray-600">(11) 97851-9899</p>
                                             <p className="text-sm text-gray-500">Atendimento diário das 9h às 19h</p>
                                         </div>
                                     </div>

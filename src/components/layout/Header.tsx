@@ -50,7 +50,7 @@ export function Header() {
 
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <Button variant="outline" size="sm" className="border-white/30 text-white hover:bg-white hover:text-primary bg-transparent backdrop-blur-sm" asChild>
-                        <Link href="/contato">Agendar Visita</Link>
+                        <Link href="https://wa.me/5511978519899?text=Olá, gostaria de agendar uma visita ao Jardins da Hípica." target="_blank">Agendar Visita</Link>
                     </Button>
                 </div>
 
@@ -87,7 +87,7 @@ export function Header() {
                         ))}
                         <div className="mt-6">
                             <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 h-12 text-lg" asChild>
-                                <Link href="/contato" onClick={() => setMobileMenuOpen(false)}>
+                                <Link href="https://wa.me/5511978519899?text=Olá, gostaria de agendar uma visita ao Jardins da Hípica." target="_blank" onClick={() => setMobileMenuOpen(false)}>
                                     Agendar Visita
                                 </Link>
                             </Button>

@@ -6,12 +6,15 @@ export function Footer() {
         <footer className="bg-primary text-primary-foreground">
             <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-                    <div className="space-y-8">
-                        <span className="text-2xl font-serif font-bold tracking-tight">
-                            HÍPICA LAVVI
-                        </span>
-                        <p className="text-sm leading-6 text-white/80 max-w-xs">
-                            Um residencial clube exclusivo com 50.000m² ao lado da Hípica de Santo Amaro. O encontro perfeito entre a natureza e o design.
+                    <div className="space-y-6">
+                        <div className="flex items-center gap-2">
+                            <div className="h-8 w-8 bg-secondary rounded-full flex items-center justify-center">
+                                <span className="text-primary font-serif font-bold text-lg">L</span>
+                            </div>
+                            <span className="text-2xl font-serif text-white font-bold tracking-tight">Jardins da Hípica</span>
+                        </div>
+                        <p className="text-gray-400 font-light leading-relaxed max-w-xs">
+                            O encontro perfeito entre a natureza e a sofisticação urbana. Um oásis particular em frente à Hípica Santo Amaro.
                         </p>
                         <div className="flex space-x-6">
                             <Link href="#" className="text-white/60 hover:text-white">
@@ -69,7 +72,7 @@ export function Footer() {
                         </div>
                         <div className="md:grid md:grid-cols-1 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold leading-6 text-white">Contato (NAP)</h3>
+                                <h3 className="text-sm font-semibold leading-6 text-white">Contato</h3>
                                 <ul role="list" className="mt-6 space-y-4">
                                     <li className="text-sm leading-6 text-white/80">
                                         <strong className="block text-white">Endereço:</strong>
@@ -79,7 +82,7 @@ export function Footer() {
                                     </li>
                                     <li className="text-sm leading-6 text-white/80">
                                         <strong className="block text-white">Telefone:</strong>
-                                        (11) 99999-9999
+                                        (11) 97851-9899
                                     </li>
                                     <li className="text-sm leading-6 text-white/80">
                                         <strong className="block text-white">Email:</strong>
@@ -91,11 +94,13 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-                    <p className="text-xs leading-5 text-white/60">
-                        &copy; 2026 Hípica Lavvi Residences. Todos os direitos reservados.
-                        <br />
-                        As imagens são meramente ilustrativas e podem sofrer alterações sem aviso prévio. Material preliminar sujeito a aprovação.
-                    </p>
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-light">
+                        <p>&copy; {new Date().getFullYear()} Jardins da Hípica. Todos os direitos reservados.</p>
+                        <div className="flex gap-6">
+                            <Link href="/privacidade" className="hover:text-secondary transition-colors">Política de Privacidade</Link>
+                            <Link href="/termos" className="hover:text-secondary transition-colors">Termos de Uso</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>

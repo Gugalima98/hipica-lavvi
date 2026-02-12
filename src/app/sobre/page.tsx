@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn"; // Assuming FadeIn is used in other pages for consistecy
 
 export const metadata: Metadata = {
-    title: "Sobre a Lavvi | Excelência e Inovação no Mercado Imobiliário",
-    description: "Conheça a trajetória da Lavvi, sinônimo de alto padrão e projetos icônicos em São Paulo.",
+    title: "A Grife Lavvi | Jardins da Hípica",
+    description: "Conheça a Lavvi, incorporadora de alto padrão responsável pelo Jardins da Hípica. Excelência, design e inovação em cada detalhe.",
 };
 
 export default function AboutPage() {
@@ -56,19 +57,17 @@ export default function AboutPage() {
                                     Fomos pioneiros em trazer marcas de luxo globais para o mercado residencial brasileiro. As parcerias inéditas com gigantes como <strong>Versace Home</strong> e <strong>Fendi Casa</strong> não apenas elevaram o nosso patamar, mas transformaram o skyline da cidade e a percepção de valor no mercado imobiliário de luxo.
                                 </p>
                                 <p>
-                                    O <strong>Hípica Lavvi Residences</strong> é a materialização de toda essa bagagem. Um projeto grandioso, em um terreno raro de 50.000m² na Chácara Santo Antônio, que une a sofisticação da nossa marca com a qualidade de vida de um resort urbano integrado à natureza.
+                                    O <strong>Jardins da Hípica</strong> é a materialização de toda essa bagagem. Um projeto grandioso, em um terreno raro de 50.000m² em frente à Hípica Santo Amaro, que une a sofisticação da nossa marca com a qualidade de vida de um resort urbano integrado à natureza.
                                 </p>
                             </FadeIn>
                             <FadeIn delay={0.2} className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-gray-200">
                                 {/* Placeholder for institutional image */}
-                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-100">
-                                    <div className="text-center p-8">
-                                        <div className="w-16 h-16 border-2 border-gray-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                                            <span className="font-serif text-2xl text-gray-300">L</span>
-                                        </div>
-                                        <p className="uppercase tracking-widest text-sm">Legado Lavvi</p>
-                                    </div>
-                                </div>
+                                <Image
+                                    src="/images/Lavvi.jpg"
+                                    alt="Lavvi - Excelência e Alto Padrão"
+                                    fill
+                                    className="object-cover"
+                                />
                             </FadeIn>
                         </div>
                     </div>
@@ -89,7 +88,7 @@ export default function AboutPage() {
                                     2024
                                 </div>
                                 <FadeIn direction="up" className="w-[calc(100%-4rem)] md:w-[calc(50%-3.5rem)] bg-white p-8 rounded-2xl border border-gray-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                                    <h3 className="text-2xl font-serif text-primary font-bold mb-2">Hípica Lavvi Residences</h3>
+                                    <h3 className="text-2xl font-serif text-primary font-bold mb-2">Jardins da Hípica</h3>
                                     <p className="text-gray-600 leading-relaxed">
                                         O lançamento mais aguardado do ano. Um terreno único de 50.000m² ao lado da Hípica de Santo Amaro, redefinindo o conceito de viver bem com lazer de clube e natureza exuberante.
                                     </p>

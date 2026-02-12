@@ -18,7 +18,7 @@ const galleryItems = [
     },
     {
         src: "/images/gallery/pool.jpg", // Placeholder
-        alt: "Piscina do Hípica Lavvi",
+        alt: "Piscina do Jardins da Hípica",
         caption: "Mergulhe em um oásis particular.",
         size: "small",
     },
@@ -47,41 +47,59 @@ export function LifestyleGallery() {
                 </FadeIn>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
-                    {/* Item 1 - Large Left */}
+                    {/* Item 1 - Large Left - Piscina/Lazer */}
                     <FadeIn delay={0.1} className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl">
-                        {/* Placeholder bg */}
-                        <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500 italic">Imagem: Tennis/Esporte</div>
-
+                        <Image
+                            src="/images/empreendimento/Hipica_Book_pages-to-jpg-0030.jpg"
+                            alt="Área de Lazer Jardins da Hípica"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
                         <div className="absolute bottom-0 left-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <p className="text-white text-lg font-serif italic">"Aprimore seu saque ao lado de casa."</p>
+                            <p className="text-white text-lg font-serif italic">"Mergulhe em um oásis particular."</p>
                         </div>
                     </FadeIn>
 
-                    {/* Item 2 - Small Top Right */}
+                    {/* Item 2 - Large Top Right - Fachada/Porte Cochère */}
                     <FadeIn delay={0.2} className="md:col-span-2 relative group overflow-hidden rounded-2xl">
-                        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500 italic">Imagem: Parque Burle Marx</div>
+                        <Image
+                            src="/images/empreendimento/Hipica_Book_pages-to-jpg-0014.jpg"
+                            alt="Fachada Jardins da Hípica"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
                         <div className="absolute bottom-0 left-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <p className="text-white font-serif italic">"Manhãs revigorantes."</p>
+                            <p className="text-white font-serif italic">"Imponência e exclusividade."</p>
                         </div>
                     </FadeIn>
 
-                    {/* Item 3 - Small Bottom Right 1 */}
+                    {/* Item 3 - Small Bottom Right 1 - Interiores/Living */}
                     <FadeIn delay={0.3} className="md:col-span-1 relative group overflow-hidden rounded-2xl">
-                        <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500 italic">Imagem: Piscina</div>
+                        <Image
+                            src="/images/empreendimento/Hipica_Book_pages-to-jpg-0020.jpg"
+                            alt="Interiores Jardins da Hípica"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
                         <div className="absolute bottom-0 left-0 p-6">
-                            <p className="text-white text-sm font-serif italic">"Um oásis particular."</p>
+                            <p className="text-white text-sm font-serif italic">"Design sofisticado."</p>
                         </div>
                     </FadeIn>
 
-                    {/* Item 4 - Small Bottom Right 2 */}
+                    {/* Item 4 - Small Bottom Right 2 - Outro detalhe */}
                     <FadeIn delay={0.4} className="md:col-span-1 relative group overflow-hidden rounded-2xl">
-                        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500 italic">Imagem: Jantar</div>
+                        <Image
+                            src="/images/empreendimento/Hipica_Book_pages-to-jpg-0025.jpg"
+                            alt="Detalhes Jardins da Hípica"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
                         <div className="absolute bottom-0 left-0 p-6">
-                            <p className="text-white text-sm font-serif italic">"Receba com elegância."</p>
+                            <p className="text-white text-sm font-serif italic">"Acabamentos premium."</p>
                         </div>
                     </FadeIn>
                 </div>

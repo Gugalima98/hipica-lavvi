@@ -3,6 +3,7 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export function ProjectTeaser() {
@@ -13,9 +14,12 @@ export function ProjectTeaser() {
                     {/* Image Column (Right Aligned, 70% width on Desktop) */}
                     <div className="ml-auto w-full lg:w-[75%] h-[400px] lg:h-[600px] relative rounded-3xl overflow-hidden shadow-2xl">
                         {/* Placeholder Texture/Image */}
-                        <div className="absolute inset-0 bg-stone-900">
-                            <div className="absolute inset-0 bg-[url('/images/hero-home.png')] bg-cover bg-center opacity-60 mix-blend-overlay" />
-                        </div>
+                        <Image
+                            src="/images/hero-home.png"
+                            alt="Jardins da Hípica - Resort Urbano"
+                            fill
+                            className="object-cover"
+                        />
                     </div>
 
                     {/* Content Card (Floating Left, Overlapping) */}

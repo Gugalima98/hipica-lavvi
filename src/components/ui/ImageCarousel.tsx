@@ -29,14 +29,14 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
     };
 
     return (
-        <div className="relative group w-full h-[400px] md:h-[500px] lg:h-[600px] bg-gray-200 rounded-2xl overflow-hidden shadow-xl">
+        <div className="relative group w-full h-[400px] md:h-[500px] lg:h-[600px] bg-white rounded-2xl overflow-hidden shadow-xl">
             {/* Main Image */}
             <div
                 style={{ backgroundImage: `url(${images[currentIndex]})` }}
-                className="w-full h-full bg-center bg-cover duration-500 transition-all"
+                className="w-full h-full bg-center bg-contain bg-no-repeat duration-500 transition-all"
             >
                 {/* Overlay Text placeholder if needed */}
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
             </div>
 
             {/* Left Arrow */}

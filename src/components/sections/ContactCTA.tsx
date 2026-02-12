@@ -13,7 +13,7 @@ export function ContactCTA() {
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                     <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto" asChild>
-                        <Link href="/contato">Quero Receber Informações</Link>
+                        <Link href="https://wa.me/5511978519899?text=Olá, gostaria de receber informações sobre o Jardins da Hípica." target="_blank">Quero Receber Informações</Link>
                     </Button>
                     <Link href="/sobre" className="text-sm font-semibold leading-6 text-white hover:text-white/80">
                         Saber mais sobre o projeto <span aria-hidden="true">→</span>

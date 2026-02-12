@@ -27,7 +27,7 @@ const floorPlans: FloorPlan[] = [
             "Dependência Completa",
             "4 Vagas Determinadas"
         ],
-        image: "/images/planta-276.jpg",
+        image: "/images/plantas/planta-276m-final-1-torre-A-opcao-1.jpg",
     },
     {
         id: "223m",
@@ -40,7 +40,7 @@ const floorPlans: FloorPlan[] = [
             "Lavabo Social",
             "3 Vagas"
         ],
-        image: "/images/planta-223.jpg",
+        image: "/images/plantas/planta-223m-final-2-torre-D-opcao-1.jpg",
     },
     {
         id: "184m",
@@ -53,7 +53,7 @@ const floorPlans: FloorPlan[] = [
             "Banho de Serviço",
             "2 Vagas"
         ],
-        image: "/images/planta-184.jpg",
+        image: "/images/plantas/planta-184m-final-3-torre-D-opcao-1.jpg",
     },
     {
         id: "180m",
@@ -66,7 +66,7 @@ const floorPlans: FloorPlan[] = [
             "Entrada Social e Serviço",
             "3 Vagas"
         ],
-        image: "/images/planta-180.jpg",
+        image: "/images/plantas/planta-180m-final-3-torre-A-opcao-1.jpg",
     },
     {
         id: "170m",
@@ -79,7 +79,7 @@ const floorPlans: FloorPlan[] = [
             "Cozinha Espaçosa",
             "2 Vagas"
         ],
-        image: "/images/planta-170.jpg",
+        image: "/images/plantas/planta-170m-final-8-torre-C-opcao-1.jpg",
     },
     {
         id: "149m",
@@ -92,7 +92,7 @@ const floorPlans: FloorPlan[] = [
             "Suíte Master Confortável",
             "2 Vagas"
         ],
-        image: "/images/planta-149.jpg",
+        image: "/images/plantas/planta-149m-final-6-torre-B-opcao-1.jpg",
     },
     {
         id: "133m",
@@ -105,7 +105,7 @@ const floorPlans: FloorPlan[] = [
             "Cozinha Americana (Opcional)",
             "2 Vagas"
         ],
-        image: "/images/planta-133.jpg",
+        image: "/images/plantas/planta-133m-final-5-torre-C-opcao-1.jpg",
     },
     {
         id: "84m",
@@ -118,7 +118,7 @@ const floorPlans: FloorPlan[] = [
             "Lavabo",
             "1 Vaga"
         ],
-        image: "/images/planta-84.jpg",
+        image: "/images/plantas/planta-84m-final-6-torre-C.jpg",
     },
 ];
 
@@ -170,18 +170,13 @@ export function FloorPlans() {
                     >
                         {/* Image Side */}
                         <div className="relative aspect-[4/3] bg-white rounded-2xl overflow-hidden shadow-inner border border-gray-100 flex items-center justify-center group">
-                            {/* Placeholder visual feedback since we don't have real images yet */}
-                            <div className="absolute inset-0 bg-gray-100 flex flex-col items-center justify-center text-gray-400">
-                                <span className="text-6xl font-serif text-gray-200 mb-4">{selectedPlan.label}</span>
-                                <p className="text-sm uppercase tracking-widest">Imagem Ilustrativa da Planta</p>
-                            </div>
 
-                            {/* <Image 
+                            <Image
                                 src={selectedPlan.image}
-                                alt={`Planta de ${selectedPlan.label} - Hípica Lavvi`}
+                                alt={`Planta de ${selectedPlan.label} - Jardins da Hípica`}
                                 fill
                                 className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                            /> */}
+                            />
                         </div>
 
                         {/* Details Side */}
@@ -207,10 +202,7 @@ export function FloorPlans() {
                             </ul>
 
                             <div className="pt-6 border-t border-gray-200">
-                                <Button className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 gap-2 h-12 px-8 rounded-full text-base">
-                                    <Download className="w-4 h-4" />
-                                    Baixar Planta em PDF
-                                </Button>
+
                                 <p className="mt-4 text-xs text-gray-400 text-center sm:text-left">
                                     *Perspectiva artística da planta. Móveis e decoração não inclusos.
                                 </p>

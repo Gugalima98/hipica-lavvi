@@ -20,10 +20,14 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const property = properties.find((p) => p.slug === params.slug);
-    if (!property) return { title: "Imóvel não encontrado" };
+    if (!property) {
+        return {
+            title: "Imóvel não encontrado | Jardins da Hípica",
+        };
+    }
 
     return {
-        title: `${property.title} | Hípica Lavvi Residences`,
+        title: `${property.title} | Jardins da Hípica`,
         description: property.description,
     };
 }
@@ -156,12 +160,7 @@ export default function PropertyDetailsPage({ params }: Props) {
 
                                     <div className="space-y-4">
                                         <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-white h-14 text-lg rounded-xl shadow-lg shadow-primary/20" asChild>
-                                            <Link href="/contato">
-                                                Solicitar Tabela de Preços
-                                            </Link>
-                                        </Button>
-                                        <Button variant="outline" size="lg" className="w-full border-primary/20 text-primary hover:bg-primary/5 h-12 rounded-xl" asChild>
-                                            <Link href={`https://wa.me/5511999999999?text=Olá, gostaria de mais informações sobre o apartamento de ${property.area}m² do Hípica Lavvi.`} target="_blank">
+                                            <Link href={`https://wa.me/5511978519899?text=Olá, gostaria de mais informações sobre o apartamento de ${property.area}m² do Jardins da Hípica.`} target="_blank">
                                                 Falar no WhatsApp
                                             </Link>
                                         </Button>

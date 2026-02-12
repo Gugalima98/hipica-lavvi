@@ -28,7 +28,7 @@ import { BigNumbers } from "@/components/sections/BigNumbers";
 import { ServiceEcosystem } from "@/components/sections/ServiceEcosystem";
 
 export const metadata: Metadata = {
-    title: "O Empreendimento | Hípica Lavvi Residences - Lazer de Clube",
+    title: "O Empreendimento | Jardins da Hípica - Lazer de Clube",
     description: "Um resort urbano com mais de 50 itens de lazer, assessoria esportiva completa e serviços exclusivos.",
 };
 
@@ -70,20 +70,20 @@ const amenitiesByFloor = [
     }
 ];
 
-export default function ProjectPage() {
+export default function EmpreendimentoPage() {
     return (
         <div className="flex min-h-screen flex-col">
             <main className="flex-1">
                 {/* Hero Section */}
                 <section className="bg-primary/5 py-24 sm:py-32 relative overflow-hidden bg-grain">
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent" />
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                         <FadeIn>
                             <h1 className="text-4xl font-serif font-bold tracking-tight text-primary sm:text-6xl mb-6">
-                                Um Universo de Experiências
+                                Grandiosidade e <span className="italic text-secondary">Natureza</span>
                             </h1>
-                            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-                                Imagine viver em um resort urbano onde cada dia é uma novas descoberta.
-                                O Hípica Lavvi Residences redefine o conceito de morar com uma infraestrutura de lazer e serviços jamais vista.
+                            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
+                                O Jardins da Hípica redefine o conceito de morar bem em São Paulo. Um projeto único que une a sofisticação da Lavvi com a tranquilidade da natureza.
                             </p>
                         </FadeIn>
                     </div>

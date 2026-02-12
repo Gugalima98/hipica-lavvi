@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Política de Privacidade | Hípica Lavvi Residences",
-    description: "Como tratamos seus dados no site oficial Hípica Lavvi Residences.",
+    title: "Política de Privacidade | Jardins da Hípica",
+    description: "Como tratamos seus dados no site oficial Jardins da Hípica.",
 };
 export default function PrivacyPage() {
     return (
@@ -15,6 +15,9 @@ export default function PrivacyPage() {
                     <h2 className="text-xl font-semibold text-gray-900">1. Coleta de Informações</h2>
                     <p>Coletamos informações que você nos fornece diretamente, como quando você preenche o formulário de contato (nome, email, telefone). Também coletamos dados de navegação anonimizados para fins estatísticos.</p>
 
+                    <p className="mt-6 text-lg leading-8 text-gray-600">
+                        A sua privacidade é importante para nós. É política do Jardins da Hípica respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://jardinsdahipica.com.br" className="text-secondary hover:underline">Jardins da Hípica</a>, e outros sites que possuímos e operamos.
+                    </p>
                     <h2 className="text-xl font-semibold text-gray-900">2. Uso das Informações</h2>
                     <p>Utilizamos suas informações para: responder às suas solicitações, enviar informações sobre o empreendimento (com seu consentimento) e melhorar nosso site.</p>
 

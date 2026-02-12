@@ -20,16 +20,16 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Hípica Lavvi Residences | Oásis Urbano na Chácara Santo Antônio",
-  description: "Lançamento exclusivo Lavvi ao lado do Clube Hípico de Santo Amaro. Apartamentos de 84m² a 276m² com lazer de clube em terreno de 50.000m². Antecipe-se.",
-  keywords: ["Hípica Lavvi", "Lavvi Santo Amaro", "Apartamento Chácara Santo Antônio", "Lançamento Imobiliário SP", "Apartamento Alto Padrão"],
+  title: "Jardins da Hípica | Oásis Urbano em Frente à Hípica Santo Amaro",
+  description: "Lançamento exclusivo Lavvi em frente à Hípica Santo Amaro. Apartamentos de 84m² a 276m² com vista eterna e lazer de clube em terreno de 50.000m². Antecipe-se.",
+  keywords: ["Jardins da Hípica", "Lavvi Santo Amaro", "Apartamento Chácara Santo Antônio", "Lançamento Imobiliário SP", "Apartamento Alto Padrão"],
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://hipicalavvi.com.br",
-    title: "Hípica Lavvi Residences | Vivência de Clube Privado",
-    description: "Um oásis de 50.000m² entre a Hípica e o Parque Burle Marx.",
-    siteName: "Hípica Lavvi Residences",
+    url: "https://jardinsdahipica.com.br",
+    title: "Jardins da Hípica | Vivência de Clube Privado",
+    description: "Um oásis de 50.000m² em frente à Hípica Santo Amaro.",
+    siteName: "Jardins da Hípica",
   },
 };
 
@@ -38,10 +38,10 @@ const jsonLdData = {
   "@graph": [
     {
       "@type": "RealEstateAgent",
-      "name": "Hípica Lavvi Residences Vendas",
-      "image": "https://hipicalavvi.com.br/images/hero-home.png",
+      "name": "Jardins da Hípica Vendas",
+      "image": "https://jardinsdahipica.com.br/images/hero-home.png",
       "telephone": "+55-11-99999-9999",
-      "url": "https://hipicalavvi.com.br",
+      "url": "https://jardinsdahipica.com.br",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Visconde de Taunay, 140",
@@ -55,7 +55,7 @@ const jsonLdData = {
     {
       "@type": "Organization",
       "name": "Lavvi",
-      "url": "https://hipicalavvi.com.br",
+      "url": "https://jardinsdahipica.com.br",
       "logo": "https://hipicalavvi.com.br/logo.png"
     }
   ]
