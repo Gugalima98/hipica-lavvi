@@ -1,6 +1,5 @@
 import { MetadataRoute } from "next";
 import { properties } from "@/lib/data";
-import { blogPosts } from "@/lib/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://hipicalavvi.com.br"; // Replace with actual domain
@@ -28,12 +27,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
-    const blogRoutes = blogPosts.map((post) => ({
-        url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date(), // In a real app, use post.date
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-    }));
-
-    return [...staticRoutes, ...propertyRoutes, ...blogRoutes];
+    return [...staticRoutes, ...propertyRoutes];
 }
