@@ -24,7 +24,7 @@ export function Header() {
     return (
         <header className={cn(
             "w-full z-40 transition-all duration-300",
-            isHome ? "absolute top-0 border-b border-white/10 bg-transparent" : "relative bg-primary shadow-md border-b border-white/10"
+            isHome && !mobileMenuOpen ? "absolute top-0 border-b border-white/10 bg-transparent" : "relative bg-primary shadow-md border-b border-white/10"
         )}>
             <div className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 <div className="flex lg:flex-1">
@@ -58,7 +58,7 @@ export function Header() {
                 <div className="flex lg:hidden">
                     <button
                         type="button"
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                         <span className="sr-only">Abrir menu principal</span>
@@ -73,20 +73,20 @@ export function Header() {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="lg:hidden">
-                    <div className="space-y-1 px-4 pb-3 pt-2">
+                <div className="lg:hidden absolute top-24 left-0 right-0 bg-primary border-b border-white/10 shadow-xl z-50">
+                    <div className="space-y-1 px-4 pb-6 pt-2">
                         {navigation.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="block rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+                                className="block rounded-md px-3 py-4 text-lg font-medium text-white hover:bg-white/10 hover:text-secondary border-b border-white/5 last:border-0"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 {item.name}
                             </Link>
                         ))}
-                        <div className="mt-4">
-                            <Button className="w-full" asChild>
+                        <div className="mt-6">
+                            <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 h-12 text-lg" asChild>
                                 <Link href="/contato" onClick={() => setMobileMenuOpen(false)}>
                                     Agendar Visita
                                 </Link>

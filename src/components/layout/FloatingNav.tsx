@@ -88,13 +88,45 @@ export function FloatingNav() {
 
                             <button
                                 className="md:hidden p-2 text-white/80 hover:text-white"
-                                onClick={() => setIsMobileMenuOpen(true)}
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             >
-                                <Menu className="h-6 w-6" />
+                                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                             </button>
                         </div>
                     </div>
                 </motion.header>
+            )}
+
+            {/* Mobile Menu Overlay */}
+            {isMobileMenuOpen && (
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="fixed inset-0 z-40 bg-primary/95 backdrop-blur-xl pt-32 px-6"
+                >
+                    <div className="flex flex-col gap-6">
+                        {links.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className="text-2xl font-serif text-white/90 hover:text-secondary"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                        <Button
+                            size="lg"
+                            className="mt-8 w-full rounded-full bg-secondary text-secondary-foreground"
+                            asChild
+                        >
+                            <Link href="/contato" onClick={() => setIsMobileMenuOpen(false)}>
+                                Entrar na Lista VIP
+                            </Link>
+                        </Button>
+                    </div>
+                </motion.div>
             )}
         </AnimatePresence>
     );
