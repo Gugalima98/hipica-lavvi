@@ -2,12 +2,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const units = [
-    { area: "276m²", rooms: "4 Suítes", vacancies: "3 Vagas", description: "Torre A - Exclusividade total" },
-    { area: "215m²", rooms: "4 Dorms / 3 Suítes", vacancies: "3 Vagas", description: "Torre B - Amplitude e conforto" },
-    { area: "190m²", rooms: "4 Dorms / 2 Suítes", vacancies: "2 Vagas", description: "Torre A - Planta inteligente" },
-    { area: "149m²", rooms: "3 Suítes", vacancies: "2 Vagas", description: "Torre B - Ideal para famílias" },
-    { area: "133m²", rooms: "3 Suítes", vacancies: "2 Vagas", description: "Torre C - Praticidade e estilo" },
-    { area: "84m²", rooms: "2 Suítes", vacancies: "1 Vaga", description: "Torre C - Investimento perfeito" },
+    { area: "276m²", rooms: "4 Suítes", vacancies: "3 Vagas", description: "Torre A - Exclusividade total", slug: "torre-a-276m" },
+    { area: "223m²", rooms: "4 Suítes", vacancies: "3 Vagas", description: "Torre D - Amplitude e conforto", slug: "torre-d-223m" },
+    { area: "184m²", rooms: "4 Dorms / 3 Suítes", vacancies: "2 Vagas", description: "Torre D - Planta inteligente", slug: "torre-d-184m" },
+    { area: "149m²", rooms: "3 Suítes", vacancies: "2 Vagas", description: "Torre B - Ideal para famílias", slug: "torre-b-149m" },
+    { area: "133m²", rooms: "3 Suítes", vacancies: "2 Vagas", description: "Torre C - Praticidade e estilo", slug: "torre-c-133m" },
+    { area: "84m²", rooms: "2 Suítes", vacancies: "1 Vaga", description: "Torre C - Investimento perfeito", slug: "torre-c-84m" },
 ];
 
 export function PropertyTeaser() {
@@ -47,7 +47,7 @@ export function PropertyTeaser() {
                                     <p className="mt-4 flex-auto text-sm font-light opacity-80 leading-relaxed">{unit.description}</p>
                                     <p className="mt-8 pt-4 border-t border-white/5">
                                         <Button variant="ghost" className="w-full justify-between text-white hover:text-secondary hover:bg-transparent p-0 group-hover:translate-x-2 transition-transform" asChild>
-                                            <Link href={`/imoveis`}>
+                                            <Link href={`/imoveis/${unit.slug}`}>
                                                 Ver Planta <span aria-hidden="true">&rarr;</span>
                                             </Link>
                                         </Button>
