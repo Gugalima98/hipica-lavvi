@@ -1,4 +1,5 @@
 import { Trees, Warehouse, Trophy, Globe } from "lucide-react";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 const features = [
     {
@@ -14,7 +15,7 @@ const features = [
     {
         name: "Lazer de Clube",
         description: "Beach Tennis, complexo aquático, quadras de tênis e muito mais para toda a família.",
-        icon: Warehouse, // Using Warehouse as a placeholder for structural amenity, or maybe Umbrella/Sun
+        icon: Warehouse,
     },
     {
         name: "Design Internacional",
@@ -25,32 +26,37 @@ const features = [
 
 export function Highlights() {
     return (
-        <section className="bg-muted py-24 sm:py-32">
-            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl lg:text-center">
-                    <h2 className="text-base font-semibold leading-7 text-secondary">Exclusividade e Grandeza</h2>
-                    <p className="mt-2 text-3xl font-serif font-bold tracking-tight text-primary sm:text-4xl">
-                        Tudo o que você precisa, sem sair de casa
-                    </p>
-                    <p className="mt-6 text-lg leading-8 text-gray-600">
-                        O Hípica Lavvi Residences redefine o conceito de morar bem, integrando natureza, esporte e sofisticação em um único lugar.
-                    </p>
+        <section className="bg-slate-50 relative overflow-hidden py-24 sm:py-32 bg-grain">
+            <div className="absolute inset-0 opacity-[0.03] bg-[url('/grid.svg')] bg-center" />
+
+            <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-2xl lg:text-center mb-16">
+                    <FadeIn direction="down">
+                        <h2 className="text-base font-bold tracking-widest text-secondary uppercase">Diferenciais Exclusivos</h2>
+                        <p className="mt-2 text-3xl font-serif font-medium tracking-tight text-primary sm:text-4xl">
+                            Tudo o que você precisa para viver bem
+                        </p>
+                        <p className="mt-6 text-lg leading-8 text-gray-600">
+                            Uma infraestrutura completa de lazer e serviços, desenhada para elevar sua qualidade de vida.
+                        </p>
+                    </FadeIn>
                 </div>
-                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-                        {features.map((feature) => (
-                            <div key={feature.name} className="flex flex-col">
-                                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-primary">
-                                    <feature.icon className="h-5 w-5 flex-none text-secondary" aria-hidden="true" />
-                                    {feature.name}
-                                </dt>
-                                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                                    <p className="flex-auto">{feature.description}</p>
-                                </dd>
-                            </div>
-                        ))}
-                    </dl>
-                </div>
+
+                <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+                    {features.map((feature, index) => (
+                        <FadeIn key={feature.name} delay={index * 0.1} className="flex flex-col items-start p-6 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-secondary/30 transition-all duration-300 group">
+                            <dt className="flex flex-col items-start gap-y-4 text-xl font-serif text-primary">
+                                <div className="rounded-full bg-secondary/10 p-4 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                                    <feature.icon className="h-6 w-6 text-secondary group-hover:text-white transition-colors" aria-hidden="true" />
+                                </div>
+                                <span className="font-semibold">{feature.name}</span>
+                            </dt>
+                            <dd className="mt-4 flex flex-auto flex-col text-sm leading-6 text-gray-600 group-hover:text-gray-900 transition-colors">
+                                <p className="flex-auto">{feature.description}</p>
+                            </dd>
+                        </FadeIn>
+                    ))}
+                </dl>
             </div>
         </section>
     );

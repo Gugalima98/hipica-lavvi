@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { Header } from "@/components/layout/Header";
+import { FloatingNav } from "@/components/layout/FloatingNav";
+import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,15 +68,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          inter.variable,
-          playfair.variable
-        )}
-      >
+      <head>
         <JsonLd data={jsonLdData} />
-        {children}
+      </head>
+      <body className={cn(inter.variable, playfair.variable, "font-sans antialiased bg-background text-foreground selection:bg-secondary selection:text-secondary-foreground")}>
+        <FloatingNav />
+        <Header />
+        <main className="min-h-screen flex flex-col">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

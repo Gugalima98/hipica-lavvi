@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
     title: "Política de Privacidade | Hípica Lavvi Residences",
     description: "Como tratamos seus dados no site oficial Hípica Lavvi Residences.",
 };
-
 export default function PrivacyPage() {
     return (
         <div className="flex min-h-screen flex-col">
-            <Header />
             <main className="flex-1 py-12 sm:py-24">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-gray-700 space-y-6">
                     <h1 className="text-3xl font-bold text-primary mb-8">Política de Privacidade</h1>
@@ -29,7 +25,6 @@ export default function PrivacyPage() {
                     <p>Você tem o direito de solicitar o acesso, correção ou exclusão de seus dados pessoais a qualquer momento, entrando em contato conosco através do email informado no rodapé.</p>
                 </div>
             </main>
-            <Footer />
         </div>
     );
 }

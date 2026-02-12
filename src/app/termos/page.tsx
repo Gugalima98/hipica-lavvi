@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
     title: "Termos de Uso | Hípica Lavvi Residences",
     description: "Termos e condições de uso do site oficial Hípica Lavvi Residences.",
 };
-
 export default function TermsPage() {
     return (
         <div className="flex min-h-screen flex-col">
-            <Header />
             <main className="flex-1 py-12 sm:py-24">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-gray-700 space-y-6">
                     <h1 className="text-3xl font-bold text-primary mb-8">Termos de Uso</h1>
@@ -29,7 +25,6 @@ export default function TermsPage() {
                     <p>As informações contidas neste site são fornecidas "como estão". Não oferecemos garantias de qualquer tipo, expressas ou implícitas, sobre a integridade, precisão, confiabilidade, adequação ou disponibilidade em relação ao site ou às informações.</p>
                 </div>
             </main>
-            <Footer />
         </div>
     );
 }

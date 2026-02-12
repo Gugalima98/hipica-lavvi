@@ -1,10 +1,9 @@
 
 import type { Metadata } from "next";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { properties } from "@/lib/data";
 import { BedDouble, Bath, Car, ArrowLeft, Ruler, CheckCircle2 } from "lucide-react";
+import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -57,7 +56,6 @@ export default function PropertyDetailsPage({ params }: Props) {
     return (
         <div className="flex min-h-screen flex-col">
             <JsonLd data={productSchema} />
-            <Header />
             <main className="flex-1">
                 {/* Breadcrumb / Back */}
                 <div className="bg-muted/30 py-4 border-b">
@@ -68,76 +66,117 @@ export default function PropertyDetailsPage({ params }: Props) {
                     </div>
                 </div>
 
-                <section className="py-12 lg:py-20">
+                <section className="py-12 lg:py-16">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                            {/* Image Gallery Placeholder */}
-                            <div className="space-y-4">
-                                <div className="aspect-[4/3] bg-gray-200 rounded-2xl flex items-center justify-center text-gray-400">
-                                    <span className="text-lg font-medium">Perspectiva Ilustrada / Planta</span>
-                                </div>
-                                <div className="grid grid-cols-4 gap-4">
-                                    {[1, 2, 3, 4].map((i) => (
-                                        <div key={i} className="aspect-square bg-gray-100 rounded-lg" />
-                                    ))}
-                                </div>
-                            </div>
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-                            {/* Details */}
-                            <div>
-                                <div className="mb-6">
-                                    <h1 className="text-3xl font-serif font-bold text-primary sm:text-4xl">{property.title}</h1>
-                                    <p className="mt-2 text-xl text-muted-foreground">{property.description}</p>
+                            {/* Left Column: Gallery & Highlights (lg:col-span-7) */}
+                            <div className="lg:col-span-7 space-y-12">
+                                {/* Carousel */}
+                                <div className="space-y-4">
+                                    <h1 className="text-3xl lg:text-4xl font-serif font-bold text-primary mb-2">{property.title}</h1>
+                                    <p className="text-lg text-gray-500 mb-6">{property.description}</p>
+                                    <ImageCarousel images={property.images} alt={property.title} />
                                 </div>
 
-                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-8 border-y border-border">
-                                    <div className="text-center p-4 bg-muted/20 rounded-lg">
-                                        <Ruler className="h-6 w-6 text-secondary mx-auto mb-2" />
-                                        <span className="block text-sm font-medium text-muted-foreground">Área</span>
-                                        <span className="block text-lg font-bold text-primary">{property.area}m²</span>
-                                    </div>
-                                    <div className="text-center p-4 bg-muted/20 rounded-lg">
-                                        <BedDouble className="h-6 w-6 text-secondary mx-auto mb-2" />
-                                        <span className="block text-sm font-medium text-muted-foreground">Dormitórios</span>
-                                        <span className="block text-lg font-bold text-primary">{property.bedrooms}</span>
-                                    </div>
-                                    <div className="text-center p-4 bg-muted/20 rounded-lg">
-                                        <Bath className="h-6 w-6 text-secondary mx-auto mb-2" />
-                                        <span className="block text-sm font-medium text-muted-foreground">Suítes</span>
-                                        <span className="block text-lg font-bold text-primary">{property.suites}</span>
-                                    </div>
-                                    <div className="text-center p-4 bg-muted/20 rounded-lg">
-                                        <Car className="h-6 w-6 text-secondary mx-auto mb-2" />
-                                        <span className="block text-sm font-medium text-muted-foreground">Vagas</span>
-                                        <span className="block text-lg font-bold text-primary">{property.garages}</span>
+                                {/* Tower Specs */}
+                                <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+                                    <h3 className="text-xl font-bold text-primary mb-6 flex items-center">
+                                        <Ruler className="mr-2 h-6 w-6 text-secondary" />
+                                        Ficha Técnica da Torre
+                                    </h3>
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                                        <div className="p-4 bg-muted/20 rounded-xl">
+                                            <span className="block text-xs uppercase tracking-wider text-muted-foreground mb-1">Torre</span>
+                                            <span className="font-bold text-primary text-lg">{property.tower}</span>
+                                        </div>
+                                        <div className="p-4 bg-muted/20 rounded-xl">
+                                            <span className="block text-xs uppercase tracking-wider text-muted-foreground mb-1">Pavimentos</span>
+                                            <span className="font-bold text-primary text-lg">{property.towerDetails?.floors || "43"}</span>
+                                        </div>
+                                        <div className="p-4 bg-muted/20 rounded-xl">
+                                            <span className="block text-xs uppercase tracking-wider text-muted-foreground mb-1">Unidades/Andar</span>
+                                            <span className="font-bold text-primary text-lg">{property.towerDetails?.unitsPerFloor}</span>
+                                        </div>
+                                        <div className="p-4 bg-muted/20 rounded-xl">
+                                            <span className="block text-xs uppercase tracking-wider text-muted-foreground mb-1">Elevadores</span>
+                                            <span className="font-bold text-primary text-lg">{property.towerDetails?.elevators || "Social+Serviço"}</span>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div className="py-8">
-                                    <h3 className="text-lg font-bold text-primary mb-4">Diferenciais</h3>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                {/* Features List */}
+                                <div>
+                                    <h3 className="text-xl font-bold text-primary mb-6">Diferenciais da Unidade</h3>
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {property.features.map((feature) => (
-                                            <li key={feature} className="flex items-center text-gray-700">
-                                                <CheckCircle2 className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
-                                                {feature}
+                                            <li key={feature} className="flex items-start p-4 bg-stone-50 rounded-lg">
+                                                <CheckCircle2 className="h-5 w-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
+                                                <span className="text-gray-700 font-medium">{feature}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
+                            </div>
 
-                                <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
-                                    <h3 className="text-lg font-bold text-primary mb-2">Interessou?</h3>
-                                    <p className="text-sm text-gray-600 mb-6">Cadastre-se para receber a planta detalhada em PDF e a tabela de preços deste mês.</p>
-                                    <Button size="lg" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90" asChild>
-                                        <Link href="/contato">Solicitar Tabela e Planta</Link>
-                                    </Button>
+                            {/* Right Column: Sticky Summary & CTA (lg:col-span-5) */}
+                            <div className="lg:col-span-5">
+                                <div className="sticky top-8 bg-white border border-gray-100 rounded-2xl p-8 shadow-xl">
+                                    <div className="text-center mb-8 pb-8 border-b border-gray-100">
+                                        <span className="block text-sm font-medium text-gray-500 uppercase tracking-widest mb-2">Área Privativa</span>
+                                        <div className="flex items-center justify-center gap-1">
+                                            <span className="text-6xl font-serif font-bold text-primary">{property.area}</span>
+                                            <span className="text-2xl text-gray-400 mt-4">m²</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-3 gap-4 mb-8">
+                                        <div className="text-center">
+                                            <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-2 text-secondary">
+                                                <BedDouble size={20} />
+                                            </div>
+                                            <span className="block text-sm font-bold text-gray-900">{property.bedrooms} Dorms</span>
+                                            <span className="text-xs text-gray-500">({property.suites} Suítes)</span>
+                                        </div>
+                                        <div className="text-center border-x border-gray-100">
+                                            <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-2 text-secondary">
+                                                <Car size={20} />
+                                            </div>
+                                            <span className="block text-sm font-bold text-gray-900">{property.garages} Vagas</span>
+                                            <span className="text-xs text-gray-500">Determinadas</span>
+                                        </div>
+                                        <div className="text-center">
+                                            <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-2 text-secondary">
+                                                <Bath size={20} />
+                                            </div>
+                                            <span className="block text-sm font-bold text-gray-900">{property.bathrooms} Banhos</span>
+                                            <span className="text-xs text-gray-500">Total</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-white h-14 text-lg rounded-xl shadow-lg shadow-primary/20" asChild>
+                                            <Link href="/contato">
+                                                Solicitar Tabela de Preços
+                                            </Link>
+                                        </Button>
+                                        <Button variant="outline" size="lg" className="w-full border-primary/20 text-primary hover:bg-primary/5 h-12 rounded-xl" asChild>
+                                            <Link href={`https://wa.me/5511999999999?text=Olá, gostaria de mais informações sobre o apartamento de ${property.area}m² do Hípica Lavvi.`} target="_blank">
+                                                Falar no WhatsApp
+                                            </Link>
+                                        </Button>
+                                    </div>
+
+                                    <p className="text-xs text-center text-gray-400 mt-6">
+                                        * Valores e disponibilidade sujeitos a alteração sem aviso prévio. As imagens são perspectivas artísticas.
+                                    </p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </section>
             </main>
-            <Footer />
         </div>
     );
 }

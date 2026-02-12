@@ -12,11 +12,18 @@ const units = [
 
 export function PropertyTeaser() {
     return (
-        <section className="bg-primary py-24 sm:py-32">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-base font-semibold leading-7 text-secondary">Tipologias</h2>
-                    <p className="mt-2 text-3xl font-serif font-bold tracking-tight text-white sm:text-4xl">
+        <section className="bg-[#050A14] py-24 sm:py-32 relative overflow-hidden">
+            {/* Decorative background element - increased opacity */}
+            <div className="absolute top-0 right-0 -mr-20 -mt-20 opacity-10 select-none pointer-events-none">
+                <span className="font-serif text-[400px] text-white leading-none">LV</span>
+            </div>
+
+            <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-2xl lg:text-center mb-16">
+                    <h2 className="text-sm font-bold tracking-[0.2em] text-secondary uppercase mb-3">
+                        Tipologias
+                    </h2>
+                    <p className="text-3xl font-serif font-medium tracking-tight text-white sm:text-4xl">
                         Plantas Feitas para o Seu Momento
                     </p>
                     <p className="mt-6 text-lg leading-8 text-primary-foreground/80">
@@ -24,27 +31,33 @@ export function PropertyTeaser() {
                     </p>
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-                    <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-3">
+                    <dl className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3">
                         {units.map((unit) => (
-                            <div key={unit.area} className="flex flex-col rounded-2xl bg-white/5 p-8 border border-white/10 hover:border-secondary/50 transition-colors">
-                                <dt className="text-2xl font-bold leading-7 text-white">
+                            <div key={unit.area} className="group relative flex flex-col overflow-hidden rounded-xl bg-white/5 p-8 transition-all duration-500 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/50 border border-white/10 hover:border-secondary/30 backdrop-blur-sm">
+                                <div className="absolute top-0 right-0 p-4 opacity-10 transition-opacity group-hover:opacity-20">
+                                    <span className="font-serif text-6xl text-secondary">LV</span>
+                                </div>
+                                <dt className="text-3xl font-serif font-light text-white group-hover:text-secondary transition-colors">
                                     {unit.area}
                                 </dt>
-                                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-primary-foreground/90">
-                                    <p className="font-semibold text-secondary">{unit.rooms}</p>
-                                    <p className="mt-1">{unit.vacancies}</p>
-                                    <p className="mt-4 flex-auto text-sm opacity-80">{unit.description}</p>
-                                    <p className="mt-6">
-                                        <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white hover:text-primary" asChild>
-                                            <Link href={`/imoveis`}>Ver Planta</Link>
+                                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                                    <p className="font-medium text-white text-lg border-b border-white/10 pb-4 mb-4">{unit.rooms}</p>
+                                    <p className="text-sm uppercase tracking-wider text-secondary mb-1">Vagas</p>
+                                    <p>{unit.vacancies}</p>
+                                    <p className="mt-4 flex-auto text-sm font-light opacity-80 leading-relaxed">{unit.description}</p>
+                                    <p className="mt-8 pt-4 border-t border-white/5">
+                                        <Button variant="ghost" className="w-full justify-between text-white hover:text-secondary hover:bg-transparent p-0 group-hover:translate-x-2 transition-transform" asChild>
+                                            <Link href={`/imoveis`}>
+                                                Ver Planta <span aria-hidden="true">&rarr;</span>
+                                            </Link>
                                         </Button>
                                     </p>
                                 </dd>
                             </div>
                         ))}
                     </dl>
-                    <div className="mt-16 flex justify-center">
-                        <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90" asChild>
+                    <div className="mt-20 flex justify-center">
+                        <Button size="lg" className="h-14 px-10 bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg tracking-wide rounded-full shadow-lg hover:shadow-secondary/20 transition-all duration-300" asChild>
                             <Link href="/imoveis">Ver Todas as Opções</Link>
                         </Button>
                     </div>

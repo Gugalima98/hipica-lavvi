@@ -1,60 +1,92 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export function ContactForm() {
-    const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.id]: e.target.value
+        });
+    };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        setStatus("submitting");
-        // Simulate API call
-        setTimeout(() => {
-            setStatus("success");
-            alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-        }, 1500);
+        console.log(formData);
+        alert("Obrigado pelo interesse. Um especialista entrará em contato em breve.");
     };
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="space-y-4">
                 <div className="space-y-2">
-                    <Label htmlFor="name">Nome Completo</Label>
-                    <Input id="name" placeholder="Seu nome" required />
+                    <label htmlFor="name" className="text-xs uppercase tracking-widest text-secondary font-medium">Nome Completo</label>
+                    <Input
+                        id="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Seu nome"
+                        className="border-0 border-b border-input rounded-none px-0 focus-visible:ring-0 focus-visible:border-secondary bg-transparent placeholder:text-muted-foreground/50 h-10 transition-colors"
+                    />
                 </div>
-                <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="seu@email.com" required />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                        <label htmlFor="email" className="text-xs uppercase tracking-widest text-secondary font-medium">E-mail</label>
+                        <Input
+                            id="email"
+                            type="email"
+                            required
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="seu@email.com"
+                            className="border-0 border-b border-input rounded-none px-0 focus-visible:ring-0 focus-visible:border-secondary bg-transparent placeholder:text-muted-foreground/50 h-10 transition-colors"
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <label htmlFor="phone" className="text-xs uppercase tracking-widest text-secondary font-medium">Telefone</label>
+                        <Input
+                            id="phone"
+                            type="tel"
+                            required
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="(11) 99999-9999"
+                            className="border-0 border-b border-input rounded-none px-0 focus-visible:ring-0 focus-visible:border-secondary bg-transparent placeholder:text-muted-foreground/50 h-10 transition-colors"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div className="space-y-2">
-                <Label htmlFor="phone">Telefone / WhatsApp</Label>
-                <Input id="phone" placeholder="(11) 99999-9999" required />
-            </div>
-            <div className="space-y-2">
-                <Label htmlFor="interest">Interesse</Label>
-                <select
-                    id="interest"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                    <option>Gostaria de receber a Tabela de Preços</option>
-                    <option>Quero agendar uma visita</option>
-                    <option>Tenho dúvidas sobre o financiamento</option>
-                    <option>Outro</option>
-                </select>
-            </div>
-            <div className="space-y-2">
-                <Label htmlFor="message">Mensagem</Label>
-                <Textarea id="message" placeholder="Olá, gostaria de mais informações sobre..." />
+
+                <div className="space-y-2 pt-2">
+                    <label htmlFor="message" className="text-xs uppercase tracking-widest text-secondary font-medium">Mensagem (Opcional)</label>
+                    <Textarea
+                        id="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Gostaria de saber mais sobre..."
+                        className="border-0 border-b border-input rounded-none px-0 focus-visible:ring-0 focus-visible:border-secondary bg-transparent placeholder:text-muted-foreground/50 resize-none min-h-[80px] transition-colors"
+                    />
+                </div>
             </div>
 
-            <Button type="submit" size="lg" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90" disabled={status === "submitting"}>
-                {status === "submitting" ? "Enviando..." : "Enviar Mensagem"}
+            <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-12 text-sm uppercase tracking-widest rounded-none mt-4 transition-all duration-300 hover:shadow-lg">
+                Solicitar Atendimento
             </Button>
+
+            <p className="text-[10px] text-center text-muted-foreground mt-4">
+                Ao enviar, você concorda com nossa Política de Privacidade. Seus dados estão seguros.
+            </p>
         </form>
-    )
+    );
 }

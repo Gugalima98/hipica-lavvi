@@ -14,25 +14,34 @@ const navigation = [
     { name: "Contato", href: "/contato" },
 ];
 
+import { usePathname } from "next/navigation";
+
 export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+    const isHome = pathname === "/";
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <header className={cn(
+            "w-full z-40 transition-all duration-300",
+            isHome ? "absolute top-0 border-b border-white/10 bg-transparent" : "relative bg-primary shadow-md border-b border-white/10"
+        )}>
+            <div className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 <div className="flex lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5 text-lg font-serif font-bold text-primary tracking-tight">
-                        HÍPICA LAVVI
+                    <Link href="/" className="-m-1.5 p-1.5">
+                        <span className="text-2xl font-serif font-bold text-white tracking-wide">
+                            HÍPICA LAVVI
+                        </span>
                     </Link>
                 </div>
 
                 {/* Desktop Navigation */}
-                <div className="hidden lg:flex lg:gap-x-8">
+                <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
+                            className="text-sm font-medium leading-6 text-white/90 hover:text-secondary transition-colors tracking-wide"
                         >
                             {item.name}
                         </Link>
@@ -40,7 +49,7 @@ export function Header() {
                 </div>
 
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Button variant="default" size="sm" asChild>
+                    <Button variant="outline" size="sm" className="border-white/30 text-white hover:bg-white hover:text-primary bg-transparent backdrop-blur-sm" asChild>
                         <Link href="/contato">Agendar Visita</Link>
                     </Button>
                 </div>

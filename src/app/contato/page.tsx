@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
@@ -8,11 +6,9 @@ export const metadata: Metadata = {
     title: "Contato | Agende sua Visita - Hípica Lavvi Residences",
     description: "Entre em contato com a equipe de vendas oficial do Hípica Lavvi. Agende sua visita ao decorado ou solicite a tabela de preços.",
 };
-
 export default function ContactPage() {
     return (
         <div className="flex min-h-screen flex-col">
-            <Header />
             <main className="flex-1">
                 <section className="bg-primary py-16 sm:py-24">
                     <div className="container mx-auto px-4 text-center text-white">
@@ -86,7 +82,6 @@ export default function ContactPage() {
                     </div>
                 </section>
             </main>
-            <Footer />
         </div>
     );
 }
