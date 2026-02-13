@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     description: "Um oásis de 50.000m² em frente à Hípica Santo Amaro.",
     siteName: "Jardins da Hípica",
   },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 const jsonLdData = {
