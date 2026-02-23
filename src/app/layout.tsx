@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { FloatingNav } from "@/components/layout/FloatingNav";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { cn } from "@/lib/utils";
 
@@ -105,6 +106,7 @@ export default function RootLayout({
         <main className="min-h-screen flex flex-col">
           {children}
         </main>
+        <FloatingWhatsApp />
         <Footer />
       </body>
     </html>
