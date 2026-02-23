@@ -44,7 +44,7 @@ export default function PropertyDetailsPage({ params }: Props) {
         "@type": "Product",
         "name": property.title,
         "description": property.description,
-        "image": "https://hipicalavvi.com.br/images/hero-home.png", // Use real image URL
+        "image": "https://www.jardinsdahipica.com/images/hero-home.png", // Use real image URL
         "brand": {
             "@type": "Brand",
             "name": "Lavvi"

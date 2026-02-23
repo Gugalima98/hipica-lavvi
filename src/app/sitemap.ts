@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { properties } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://hipicalavvi.com.br"; // Replace with actual domain
+    const baseUrl = "https://www.jardinsdahipica.com"; // Replace with actual domain
 
     const staticRoutes = [
         "",

@@ -86,7 +86,7 @@ export function Footer() {
                                     </li>
                                     <li className="text-sm leading-6 text-white/80">
                                         <strong className="block text-white">Email:</strong>
-                                        contato@hipicalavvi.com.br
+                                        contato@jardinsdahipica.com
                                     </li>
                                 </ul>
                             </div>

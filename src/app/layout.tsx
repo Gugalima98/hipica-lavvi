@@ -20,21 +20,44 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Jardins da Hípica | Oásis Urbano em Frente à Hípica Santo Amaro",
+  metadataBase: new URL("https://www.jardinsdahipica.com"),
+  title: {
+    default: "Jardins da Hípica | Oásis Urbano em Frente à Hípica Santo Amaro",
+    template: "%s | Jardins da Hípica",
+  },
   description: "Lançamento exclusivo Lavvi em frente à Hípica Santo Amaro. Apartamentos de 84m² a 276m² com vista eterna e lazer de clube em terreno de 50.000m². Antecipe-se.",
   keywords: ["Jardins da Hípica", "Lavvi Santo Amaro", "Apartamento Chácara Santo Antônio", "Lançamento Imobiliário SP", "Apartamento Alto Padrão"],
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://jardinsdahipica.com.br",
+    url: "https://www.jardinsdahipica.com",
     title: "Jardins da Hípica | Vivência de Clube Privado",
     description: "Um oásis de 50.000m² em frente à Hípica Santo Amaro.",
     siteName: "Jardins da Hípica",
+    images: [
+      {
+        url: "/images/hero-home.png",
+        width: 1200,
+        height: 630,
+        alt: "Jardins da Hípica - Oásis Urbano",
+      }
+    ]
   },
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
     apple: "/apple-icon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -44,9 +67,9 @@ const jsonLdData = {
     {
       "@type": "RealEstateAgent",
       "name": "Jardins da Hípica Vendas",
-      "image": "https://jardinsdahipica.com.br/images/hero-home.png",
+      "image": "https://www.jardinsdahipica.com/images/hero-home.png",
       "telephone": "+55-11-99999-9999",
-      "url": "https://jardinsdahipica.com.br",
+      "url": "https://www.jardinsdahipica.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Visconde de Taunay, 140",
@@ -60,8 +83,8 @@ const jsonLdData = {
     {
       "@type": "Organization",
       "name": "Lavvi",
-      "url": "https://jardinsdahipica.com.br",
-      "logo": "https://hipicalavvi.com.br/logo.png"
+      "url": "https://www.jardinsdahipica.com",
+      "logo": "https://www.jardinsdahipica.com/logo.png"
     }
   ]
 };

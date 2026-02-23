@@ -16,7 +16,7 @@ export default function PrivacyPage() {
                     <p>Coletamos informações que você nos fornece diretamente, como quando você preenche o formulário de contato (nome, email, telefone). Também coletamos dados de navegação anonimizados para fins estatísticos.</p>
 
                     <p className="mt-6 text-lg leading-8 text-gray-600">
-                        A sua privacidade é importante para nós. É política do Jardins da Hípica respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://jardinsdahipica.com.br" className="text-secondary hover:underline">Jardins da Hípica</a>, e outros sites que possuímos e operamos.
+                        A sua privacidade é importante para nós. É política do Jardins da Hípica respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://www.jardinsdahipica.com" className="text-secondary hover:underline">Jardins da Hípica</a>, e outros sites que possuímos e operamos.
                     </p>
                     <h2 className="text-xl font-semibold text-gray-900">2. Uso das Informações</h2>
                     <p>Utilizamos suas informações para: responder às suas solicitações, enviar informações sobre o empreendimento (com seu consentimento) e melhorar nosso site.</p>

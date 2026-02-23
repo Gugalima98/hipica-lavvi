@@ -54,7 +54,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-lg text-gray-900">Email</h3>
-                                            <p className="text-gray-600">contato@hipicalavvi.com.br</p>
+                                            <p className="text-gray-600">contato@jardinsdahipica.com</p>
                                         </div>
                                     </div>
                                 </div>
