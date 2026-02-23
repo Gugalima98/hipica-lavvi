@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { FloatingNav } from "@/components/layout/FloatingNav";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
+import { ExitPopup } from "@/components/layout/ExitPopup";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { cn } from "@/lib/utils";
 
@@ -107,6 +108,7 @@ export default function RootLayout({
           {children}
         </main>
         <FloatingWhatsApp />
+        <ExitPopup />
         <Footer />
       </body>
     </html>
