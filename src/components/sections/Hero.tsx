@@ -22,7 +22,9 @@ export function Hero() {
                     fill
                     className="object-cover"
                     priority
-                    quality={90}
+                    fetchPriority="high"
+                    sizes="100vw"
+                    quality={75}
                 />
                 {/* Advanced Gradient Overlay for maximum readability */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
