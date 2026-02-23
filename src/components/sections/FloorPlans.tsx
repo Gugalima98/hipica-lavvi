@@ -185,7 +185,7 @@ export function FloorPlans() {
                                 <h4 className="text-3xl font-serif text-primary mb-2">
                                     {selectedPlan.label}
                                 </h4>
-                                <p className="text-lg text-secondary font-medium">
+                                <p className="text-lg text-primary/80 font-medium">
                                     {selectedPlan.description}
                                 </p>
                             </div>

@@ -68,7 +68,7 @@ export default function ContactPage() {
                                         allowFullScreen
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
-                                        title="Localização do Stand"
+                                        title="Localização do Stand de Vendas do Jardins da Hípica"
                                     ></iframe>
                                 </div>
                             </div>

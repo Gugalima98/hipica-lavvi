@@ -89,7 +89,7 @@ export default function PropertyDetailsPage({ params }: Props) {
                                         <Ruler className="mr-2 h-6 w-6 text-secondary" />
                                         Ficha Técnica da Torre
                                     </h3>
-                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
                                         <div className="p-4 bg-muted/20 rounded-xl">
                                             <span className="block text-xs uppercase tracking-wider text-muted-foreground mb-1">Torre</span>
                                             <span className="font-bold text-primary text-lg">{property.tower}</span>

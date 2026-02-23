@@ -12,6 +12,7 @@ export function GoogleMap() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                title="Google Maps - Localização do Empreendimento"
             />
         </div>
     );

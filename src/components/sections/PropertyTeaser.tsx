@@ -31,16 +31,16 @@ export function PropertyTeaser() {
                     </p>
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-                    <dl className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3">
                         {units.map((unit) => (
                             <div key={unit.area} className="group relative flex flex-col overflow-hidden rounded-xl bg-white/5 p-8 transition-all duration-500 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary/50 border border-white/10 hover:border-secondary/30 backdrop-blur-sm">
                                 <div className="absolute top-0 right-0 p-4 opacity-10 transition-opacity group-hover:opacity-20">
                                     <span className="font-serif text-6xl text-secondary">JH</span>
                                 </div>
-                                <dt className="text-3xl font-serif font-light text-white group-hover:text-secondary transition-colors">
+                                <div className="text-3xl font-serif font-light text-white group-hover:text-secondary transition-colors">
                                     {unit.area}
-                                </dt>
-                                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                                </div>
+                                <div className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                                     <p className="font-medium text-white text-lg border-b border-white/10 pb-4 mb-4">{unit.rooms}</p>
                                     <p className="text-sm uppercase tracking-wider text-secondary mb-1">Vagas</p>
                                     <p>{unit.vacancies}</p>
@@ -52,10 +52,10 @@ export function PropertyTeaser() {
                                             </Link>
                                         </Button>
                                     </p>
-                                </dd>
+                                </div>
                             </div>
                         ))}
-                    </dl>
+                    </div>
                     <div className="mt-20 flex justify-center">
                         <Button size="lg" className="h-14 px-10 bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg tracking-wide rounded-full shadow-lg hover:shadow-secondary/20 transition-all duration-300" asChild>
                             <Link href="/imoveis">Ver Todas as Opções</Link>

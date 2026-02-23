@@ -53,7 +53,6 @@ export function ProjectTeaser() {
                         loop
                         muted
                         playsInline
-                        poster="/images/hero-home.png"
                     >
                         <source src="/Captions_572A17.MP4" type="video/mp4" />
                         Seu navegador não suporta vídeos HTML5.
