@@ -76,9 +76,7 @@ export function Footer() {
                                 <ul role="list" className="mt-6 space-y-4">
                                     <li className="text-sm leading-6 text-white/80">
                                         <strong className="block text-white">Endereço:</strong>
-                                        Rua. Visconde de Taunay, 140 - Vila Cruzeiro, São Paulo - SP, 04726-010
-                                        <br />
-                                        (Ao lado do Clube Hípico)
+                                        Av. João Dias, 1084 | Clube Hípico de Santo Amaro
                                     </li>
                                     <li className="text-sm leading-6 text-white/80">
                                         <strong className="block text-white">Telefone:</strong>
