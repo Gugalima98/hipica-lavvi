@@ -2,16 +2,39 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { FadeIn } from "@/components/ui/FadeIn"; // Assuming FadeIn is used in other pages for consistecy
+import { FadeIn } from "@/components/ui/FadeIn";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-    title: "A Grife Lavvi | Jardins da Hípica",
-    description: "Conheça a Lavvi, incorporadora de alto padrão responsável pelo Jardins da Hípica. Excelência, design e inovação em cada detalhe.",
+    title: "Sobre a Lavvi | Empreendimento Jardins da Hípica Lavvi",
+    description: "Conheça a Lavvi, a incorporadora de luxo responsável pelo lançamento Jardins da Hípica Lavvi em Santo Amaro. Excelência, design e inovação em cada detalhe.",
+    alternates: {
+        canonical: "/sobre"
+    }
 };
 
 export default function AboutPage() {
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.jardinsdahipica.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Sobre a Lavvi"
+            }
+        ]
+    };
+
     return (
         <div className="flex min-h-screen flex-col">
+            <JsonLd data={breadcrumbSchema} />
             <main className="flex-1">
                 {/* Page Header - Enhanced visuals */}
                 <section className="bg-primary py-32 sm:py-40 relative overflow-hidden">
