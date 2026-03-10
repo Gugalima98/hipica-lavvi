@@ -17,8 +17,8 @@ export function Hero() {
                 transition={{ duration: 10, ease: "easeOut" }}
             >
                 <Image
-                    src="/images/hero.webp"
-                    alt="Jardins da Hípica - Vista aérea do complexo com piscinas e área verde"
+                    src="/images/jardins-da-hipica-lavvi-fachada.webp"
+                    alt="Jardins da Hípica Lavvi - Vista aérea do complexo em Santo Amaro com piscinas e área verde"
                     fill
                     className="object-cover"
                     priority
@@ -44,8 +44,8 @@ export function Hero() {
                     <FadeIn delay={0.4}>
                         <h1 className="font-serif text-5xl font-light tracking-wide text-white sm:text-7xl lg:text-8xl leading-[1.1] drop-shadow-lg">
                             Oásis Urbano <br />
-                            <span className="font-medium italic text-white relative">
-                                Jardins da Hípica
+                            <span className="font-medium italic text-white relative flex flex-col sm:inline-block">
+                                Jardins da Hípica Lavvi
                                 <span className="absolute -bottom-2 left-0 w-full h-1 bg-secondary rounded-full shadow-[0_0_15px_rgba(197,160,89,0.5)]"></span>
                             </span>
                         </h1>
@@ -65,10 +65,10 @@ export function Hero() {
 
                     <FadeIn delay={0.8} className="mt-12 flex flex-wrap gap-6">
                         <Button size="lg" className="h-14 px-10 text-base bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(197,160,89,0.3)] rounded-full" asChild>
-                            <Link href="https://wa.me/5511978519899?text=Olá, gostaria de entrar na Lista VIP do Jardins da Hípica." target="_blank">Entrar na Lista VIP</Link>
+                            <Link href="https://wa.me/5511978519899?text=Olá, gostaria de entrar na Lista VIP do Jardins da Hípica." target="_blank" title="Fale com a Vendas Jardins da Hípica Lavvi no WhatsApp">Entrar na Lista VIP</Link>
                         </Button>
                         <Button variant="outline" size="lg" className="h-14 px-10 text-base bg-white/5 text-white border-white/20 hover:bg-white hover:text-primary transition-all duration-500 backdrop-blur-md rounded-full" asChild>
-                            <Link href="/empreendimento">Conhecer o Projeto</Link>
+                            <Link href="/empreendimento" title="Conheça o empreendimento Jardins da Hípica Lavvi em Detalhes">Conhecer o Projeto</Link>
                         </Button>
                     </FadeIn>
                 </div>

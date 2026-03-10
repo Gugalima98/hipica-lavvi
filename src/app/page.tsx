@@ -35,7 +35,7 @@ export default function Home() {
             <div>
               <h2 className="text-sm font-medium tracking-[0.2em] text-secondary uppercase mb-3">Localização Privilegiada</h2>
               <h3 className="text-4xl font-serif font-light text-primary mb-6">
-                Onde a Natureza Encontra a <span className="italic font-medium">Urbanidade</span>
+                Onde a Natureza do Jardim da Hípica Encontra a <span className="italic font-medium">Urbanidade</span>
               </h3>
               <p className="text-muted-foreground mb-8 text-lg font-light">
                 Viva ao lado da Hípica de Santo Amaro, com fácil acesso às principais vias da cidade e cercado por uma infraestrutura completa de serviços e lazer.

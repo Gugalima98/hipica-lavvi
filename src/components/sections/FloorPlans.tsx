@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -13,6 +14,7 @@ interface FloorPlan {
     description: string;
     features: string[];
     image: string;
+    slug: string;
 }
 
 const floorPlans: FloorPlan[] = [
@@ -27,7 +29,8 @@ const floorPlans: FloorPlan[] = [
             "Dependência Completa",
             "4 Vagas Determinadas"
         ],
-        image: "/images/plantas/planta-276m-final-1-torre-A-opcao-1.jpg",
+        image: "/images/plantas/jardins-da-hipica-lavvi-planta-276m-torre-a.jpg",
+        slug: "torre-a-276m",
     },
     {
         id: "223m",
@@ -40,7 +43,8 @@ const floorPlans: FloorPlan[] = [
             "Lavabo Social",
             "3 Vagas"
         ],
-        image: "/images/plantas/planta-223m-final-2-torre-D-opcao-1.jpg",
+        image: "/images/plantas/jardins-da-hipica-lavvi-planta-223m-torre-d.jpg",
+        slug: "torre-d-223m",
     },
     {
         id: "184m",
@@ -53,7 +57,8 @@ const floorPlans: FloorPlan[] = [
             "Banho de Serviço",
             "2 Vagas"
         ],
-        image: "/images/plantas/planta-184m-final-3-torre-D-opcao-1.jpg",
+        image: "/images/plantas/jardins-da-hipica-lavvi-planta-184m-torre-d.jpg",
+        slug: "torre-d-184m",
     },
     {
         id: "180m",
@@ -66,7 +71,8 @@ const floorPlans: FloorPlan[] = [
             "Entrada Social e Serviço",
             "3 Vagas"
         ],
-        image: "/images/plantas/planta-180m-final-3-torre-A-opcao-1.jpg",
+        image: "/images/plantas/jardins-da-hipica-lavvi-planta-180m-torre-a.jpg",
+        slug: "torre-a-180m",
     },
     {
         id: "170m",
@@ -79,7 +85,8 @@ const floorPlans: FloorPlan[] = [
             "Cozinha Espaçosa",
             "2 Vagas"
         ],
-        image: "/images/plantas/planta-170m-final-8-torre-C-opcao-1.jpg",
+        image: "/images/plantas/jardins-da-hipica-lavvi-planta-170m-torre-c.jpg",
+        slug: "torre-c-170m",
     },
     {
         id: "149m",
@@ -92,7 +99,8 @@ const floorPlans: FloorPlan[] = [
             "Suíte Master Confortável",
             "2 Vagas"
         ],
-        image: "/images/plantas/planta-149m-final-6-torre-B-opcao-1.jpg",
+        image: "/images/plantas/jardins-da-hipica-lavvi-planta-149m-torre-b.jpg",
+        slug: "torre-b-149m",
     },
     {
         id: "133m",
@@ -105,7 +113,8 @@ const floorPlans: FloorPlan[] = [
             "Cozinha Americana (Opcional)",
             "2 Vagas"
         ],
-        image: "/images/plantas/planta-133m-final-5-torre-C-opcao-1.jpg",
+        image: "/images/plantas/jardins-da-hipica-lavvi-planta-133m-torre-c.jpg",
+        slug: "torre-c-133m",
     },
     {
         id: "84m",
@@ -118,7 +127,8 @@ const floorPlans: FloorPlan[] = [
             "Lavabo",
             "1 Vaga"
         ],
-        image: "/images/plantas/planta-84m-final-6-torre-C.jpg",
+        image: "/images/plantas/jardins-da-hipica-lavvi-planta-84m-torre-c.jpg",
+        slug: "torre-c-84m",
     },
 ];
 
@@ -202,7 +212,11 @@ export function FloorPlans() {
                             </ul>
 
                             <div className="pt-6 border-t border-gray-200">
-
+                                <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-all shadow-md rounded-xl" asChild>
+                                    <Link href={`/imoveis/${selectedPlan.slug}`} title={`Ver todos os detalhes e diferenciais da planta de ${selectedPlan.label}`}>
+                                        Ver Detalhes do Imóvel
+                                    </Link>
+                                </Button>
                                 <p className="mt-4 text-xs text-gray-400 text-center sm:text-left">
                                     *Perspectiva artística da planta. Móveis e decoração não inclusos.
                                 </p>

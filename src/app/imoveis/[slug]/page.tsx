@@ -1,5 +1,6 @@
 
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { properties } from "@/lib/data";
 import { BedDouble, Bath, Car, ArrowLeft, Ruler, CheckCircle2 } from "lucide-react";
@@ -27,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${property.title} | Jardins da Hípica`,
-        description: property.description,
+        title: `Jardins da Hípica Lavvi | ${property.tower} - ${property.area}m² - ${property.bedrooms} Quartos`,
+        description: `Conheça a ${property.title} no Jardins da Hípica Lavvi em Santo Amaro. Apartamento de ${property.area}m² com ${property.suites} suítes e ${property.garages} vagas. ${property.description}`,
     };
 }
 
@@ -39,12 +40,14 @@ export default function PropertyDetailsPage({ params }: Props) {
         notFound();
     }
 
+    const otherProperties = properties.filter((p) => p.slug !== params.slug).slice(0, 3);
+
     const productSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": property.title,
+        "name": `Jardins da Hípica Lavvi - ${property.title}`,
         "description": property.description,
-        "image": "https://www.jardinsdahipica.com/images/hero-home.png", // Use real image URL
+        "image": `https://www.jardinsdahipica.com${property.images[0]}`,
         "brand": {
             "@type": "Brand",
             "name": "Lavvi"
@@ -57,9 +60,33 @@ export default function PropertyDetailsPage({ params }: Props) {
         }
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.jardinsdahipica.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Imóveis",
+                "item": "https://www.jardinsdahipica.com/imoveis"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": `${property.title}`
+            }
+        ]
+    };
+
     return (
         <div className="flex min-h-screen flex-col">
-            <JsonLd data={productSchema} />
+            <JsonLd data={[productSchema, breadcrumbSchema]} />
             <main className="flex-1">
                 {/* Breadcrumb / Back */}
                 <div className="bg-muted/30 py-4 border-b">
@@ -172,6 +199,59 @@ export default function PropertyDetailsPage({ params }: Props) {
                                 </div>
                             </div>
 
+                        </div>
+                    </div>
+                </section>
+
+                {/* Cross-linking SEO Section */}
+                <section className="py-16 bg-muted/30 border-t border-gray-100">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="flex items-center justify-between mb-8">
+                            <h2 className="text-2xl font-serif font-bold text-primary">
+                                Conheça Outras Plantas no Jardins da Hípica Lavvi
+                            </h2>
+                            <Link href="/imoveis" className="text-sm font-medium text-secondary hover:underline hidden sm:block" title="Ver todas as plantas e imóveis Jardins da Hípica">
+                                Ver todas as plantas &rarr;
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {otherProperties.map((p) => (
+                                <Link
+                                    key={p.slug}
+                                    href={`/imoveis/${p.slug}`}
+                                    title={`Ver detalhes e diferenciais da ${p.title} - Jardins da Hípica`}
+                                    className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
+                                >
+                                    <div className="relative aspect-[4/3] bg-muted overflow-hidden">
+                                        <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors z-10" />
+                                        <Image
+                                            src={p.images[0]}
+                                            alt={`Planta ${p.title} - Jardins da Hípica Lavvi`}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
+                                    <div className="p-6 flex-1 flex flex-col">
+                                        <div className="text-xs font-bold tracking-widest text-secondary uppercase mb-2">
+                                            {p.tower}
+                                        </div>
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                            {p.area}m² - {p.bedrooms} Dormitórios
+                                        </h3>
+                                        <p className="text-sm text-gray-500 line-clamp-2">
+                                            {p.description}
+                                        </p>
+                                        <div className="mt-auto pt-4 flex items-center text-sm font-medium text-secondary">
+                                            Ver Informações <ArrowLeft className="w-4 h-4 ml-1 rotate-180" />
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                        <div className="mt-8 text-center sm:hidden">
+                            <Button variant="outline" className="w-full h-12 rounded-xl border-gray-200" asChild>
+                                <Link href="/imoveis" title="Ver catálogo de imóveis Jardins da Hípica">Ver catálogo completo</Link>
+                            </Button>
                         </div>
                     </div>
                 </section>

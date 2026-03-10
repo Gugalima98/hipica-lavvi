@@ -25,24 +25,24 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.jardinsdahipica.com"),
   title: {
-    default: "Jardins da Hípica | Oásis Urbano em Frente à Hípica Santo Amaro",
-    template: "%s | Jardins da Hípica",
+    default: "Jardins da Hípica Lavvi | Oásis Urbano em Santo Amaro",
+    template: "%s | Jardins da Hípica Lavvi",
   },
-  description: "Lançamento exclusivo Lavvi em frente à Hípica Santo Amaro. Apartamentos de 84m² a 276m² com vista eterna e lazer de clube em terreno de 50.000m². Antecipe-se.",
-  keywords: ["Jardins da Hípica", "Lavvi Santo Amaro", "Apartamento Chácara Santo Antônio", "Lançamento Imobiliário SP", "Apartamento Alto Padrão"],
+  description: "Lançamento exclusivo Jardim da Hípica Lavvi em frente à Hípica Santo Amaro. Apartamentos de 84m² a 276m² com vista eterna e lazer de clube. Antecipe-se.",
+  keywords: ["Jardim da hípica", "Jardins da hípica lavvi", "Jardins da hípica", "Jardins da Hípica", "Lavvi Santo Amaro", "Apartamento Chácara Santo Antônio", "Lançamento Imobiliário SP"],
   openGraph: {
     type: "website",
     locale: "pt_BR",
     url: "https://www.jardinsdahipica.com",
-    title: "Jardins da Hípica | Vivência de Clube Privado",
-    description: "Um oásis de 50.000m² em frente à Hípica Santo Amaro.",
-    siteName: "Jardins da Hípica",
+    title: "Jardins da Hípica Lavvi | Vivência de Clube Privado",
+    description: "Um oásis de 50.000m² em frente à Hípica Santo Amaro. Lançamento do Jardim da Hípica.",
+    siteName: "Jardins da Hípica Lavvi",
     images: [
       {
-        url: "/images/hero-home.png",
+        url: "/images/jardins-da-hipica-lavvi-fachada-home.png",
         width: 1200,
         height: 630,
-        alt: "Jardins da Hípica - Oásis Urbano",
+        alt: "Jardins da Hípica Lavvi - Oásis Urbano em Santo Amaro",
       }
     ]
   },
@@ -69,8 +69,8 @@ const jsonLdData = {
   "@graph": [
     {
       "@type": "RealEstateAgent",
-      "name": "Jardins da Hípica Vendas",
-      "image": "https://www.jardinsdahipica.com/images/hero-home.png",
+      "name": "Jardins da Hípica Lavvi Vendas",
+      "image": "https://www.jardinsdahipica.com/images/jardins-da-hipica-lavvi-fachada-home.png",
       "telephone": "+55-11-99999-9999",
       "url": "https://www.jardinsdahipica.com",
       "address": {
