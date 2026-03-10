@@ -6,8 +6,8 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-    title: "Sobre a Lavvi | Empreendimento Jardins da Hípica Lavvi",
-    description: "Conheça a Lavvi, a incorporadora de luxo responsável pelo lançamento Jardins da Hípica Lavvi em Santo Amaro. Excelência, design e inovação em cada detalhe.",
+    title: "Sobre a Lavvi | Empreendimento Jardim da Hípica Lavvi",
+    description: "Conheça a Lavvi, a incorporadora de luxo responsável pelo lançamento Jardim da Hípica Lavvi em Santo Amaro. Excelência, design e inovação em cada detalhe.",
     alternates: {
         canonical: "/sobre"
     }
@@ -80,7 +80,7 @@ export default function AboutPage() {
                                     Fomos pioneiros em trazer marcas de luxo globais para o mercado residencial brasileiro. As parcerias inéditas com gigantes como <strong>Versace Home</strong> e <strong>Fendi Casa</strong> não apenas elevaram o nosso patamar, mas transformaram o skyline da cidade e a percepção de valor no mercado imobiliário de luxo.
                                 </p>
                                 <p>
-                                    O <strong>Jardins da Hípica</strong> é a materialização de toda essa bagagem. Um projeto grandioso, em um terreno raro de 50.000m² em frente à Hípica Santo Amaro, que une a sofisticação da nossa marca com a qualidade de vida de um resort urbano integrado à natureza.
+                                    O <strong>Jardim da Hípica</strong> é a materialização de toda essa bagagem. Um projeto grandioso, em um terreno raro de 50.000m² em frente à Hípica Santo Amaro, que une a sofisticação da nossa marca com a qualidade de vida de um resort urbano integrado à natureza.
                                 </p>
                             </FadeIn>
                             <FadeIn delay={0.2} className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-gray-200">
@@ -111,7 +111,7 @@ export default function AboutPage() {
                                     2024
                                 </div>
                                 <FadeIn direction="up" className="w-[calc(100%-4rem)] md:w-[calc(50%-3.5rem)] bg-white p-8 rounded-2xl border border-gray-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                                    <h3 className="text-2xl font-serif text-primary font-bold mb-2">Jardins da Hípica</h3>
+                                    <h3 className="text-2xl font-serif text-primary font-bold mb-2">Jardim da Hípica</h3>
                                     <p className="text-gray-600 leading-relaxed">
                                         O lançamento mais aguardado do ano. Um terreno único de 50.000m² ao lado da Hípica de Santo Amaro, redefinindo o conceito de viver bem com lazer de clube e natureza exuberante.
                                     </p>

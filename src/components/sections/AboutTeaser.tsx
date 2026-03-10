@@ -13,7 +13,7 @@ export function AboutTeaser() {
                             Excelência e Alto Padrão em Cada Detalhe
                         </p>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            A Lavvi é referência no mercado de alto padrão em São Paulo, entregando projetos icônicos que valorizam a arquitetura, o design e o bem-estar. O Jardins da Hípica é a síntese dessa expertise: um projeto visionário em uma localização inigualável em frente à Hípica Santo Amaro, garantindo uma vista eterna e definitiva para o verde.
+                            A Lavvi é referência no mercado de alto padrão em São Paulo, entregando projetos icônicos que valorizam a arquitetura, o design e o bem-estar. O Jardim da Hípica é a síntese dessa expertise: um projeto visionário em uma localização inigualável em frente à Hípica Santo Amaro, garantindo uma vista eterna e definitiva para o verde.
                         </p>
                         <div className="mt-8">
                             <Button asChild size="lg">
@@ -26,7 +26,7 @@ export function AboutTeaser() {
                         <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl sm:aspect-[2/1] lg:aspect-auto lg:h-[500px]">
                             <Image
                                 src="/images/perspectiva_ilustrada_do_transfer_lobby.webp"
-                                alt="Jardins da Hípica - Lobby de Transfer Sofisticado"
+                                alt="Jardim da Hípica - Lobby de Transfer Sofisticado"
                                 fill
                                 className="object-cover"
                             />

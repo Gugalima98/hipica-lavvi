@@ -183,7 +183,7 @@ export function FloorPlans() {
 
                             <Image
                                 src={selectedPlan.image}
-                                alt={`Planta de ${selectedPlan.label} - Jardins da Hípica`}
+                                alt={`Planta de ${selectedPlan.label} - Jardim da Hípica`}
                                 fill
                                 className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                             />

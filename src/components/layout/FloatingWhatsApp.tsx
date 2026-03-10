@@ -18,7 +18,7 @@ export function FloatingWhatsApp() {
     }, []);
 
     const whatsappNumber = "5511978519899";
-    const whatsappMessage = "Olá, gostaria de mais informações sobre o Jardins da Hípica.";
+    const whatsappMessage = "Olá, gostaria de mais informações sobre o Jardim da Hípica.";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
     return (

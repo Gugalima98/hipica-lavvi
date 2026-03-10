@@ -3,8 +3,8 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Contato e Agendamentos | Jardins da Hípica",
-    description: "Agende sua visita ao decorado do Jardins da Hípica ou fale com nossos especialistas.",
+    title: "Contato e Agendamentos | Jardim da Hípica",
+    description: "Agende sua visita ao decorado do Jardim da Hípica ou fale com nossos especialistas.",
 };
 export default function ContactPage() {
     return (
@@ -68,7 +68,7 @@ export default function ContactPage() {
                                         allowFullScreen
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
-                                        title="Localização do Stand de Vendas do Jardins da Hípica"
+                                        title="Localização do Stand de Vendas do Jardim da Hípica"
                                     ></iframe>
                                 </div>
                             </div>

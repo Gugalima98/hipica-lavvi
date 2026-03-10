@@ -37,7 +37,7 @@ export function Highlights() {
                             Tudo o que você precisa para viver bem
                         </p>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Uma infraestrutura completa de lazer e serviços no Jardins da Hípica, desenhada para elevar sua qualidade de vida.
+                            Uma infraestrutura completa de lazer e serviços no Jardim da Hípica, desenhada para elevar sua qualidade de vida.
                         </p>
                     </FadeIn>
                 </div>

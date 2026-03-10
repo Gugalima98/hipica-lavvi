@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const property = properties.find((p) => p.slug === params.slug);
     if (!property) {
         return {
-            title: "Imóvel não encontrado | Jardins da Hípica",
+            title: "Imóvel não encontrado | Jardim da Hípica",
         };
     }
 
     return {
-        title: `Jardins da Hípica Lavvi | ${property.tower} - ${property.area}m² - ${property.bedrooms} Quartos`,
-        description: `Conheça a ${property.title} no Jardins da Hípica Lavvi em Santo Amaro. Apartamento de ${property.area}m² com ${property.suites} suítes e ${property.garages} vagas. ${property.description}`,
+        title: `Jardim da Hípica Lavvi | ${property.tower} - ${property.area}m² - ${property.bedrooms} Quartos`,
+        description: `Conheça a ${property.title} no Jardim da Hípica Lavvi em Santo Amaro. Apartamento de ${property.area}m² com ${property.suites} suítes e ${property.garages} vagas. ${property.description}`,
     };
 }
 
@@ -45,7 +45,7 @@ export default function PropertyDetailsPage({ params }: Props) {
     const productSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": `Jardins da Hípica Lavvi - ${property.title}`,
+        "name": `Jardim da Hípica Lavvi - ${property.title}`,
         "description": property.description,
         "image": `https://www.jardinsdahipica.com${property.images[0]}`,
         "brand": {
@@ -187,7 +187,7 @@ export default function PropertyDetailsPage({ params }: Props) {
 
                                     <div className="space-y-4">
                                         <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-white h-14 text-lg rounded-xl shadow-lg shadow-primary/20" asChild>
-                                            <Link href={`https://wa.me/5511978519899?text=Olá, gostaria de mais informações sobre o apartamento de ${property.area}m² do Jardins da Hípica.`} target="_blank">
+                                            <Link href={`https://wa.me/5511978519899?text=Olá, gostaria de mais informações sobre o apartamento de ${property.area}m² do Jardim da Hípica.`} target="_blank">
                                                 Falar no WhatsApp
                                             </Link>
                                         </Button>
@@ -208,9 +208,9 @@ export default function PropertyDetailsPage({ params }: Props) {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex items-center justify-between mb-8">
                             <h2 className="text-2xl font-serif font-bold text-primary">
-                                Conheça Outras Plantas no Jardins da Hípica Lavvi
+                                Conheça Outras Plantas no Jardim da Hípica Lavvi
                             </h2>
-                            <Link href="/imoveis" className="text-sm font-medium text-secondary hover:underline hidden sm:block" title="Ver todas as plantas e imóveis Jardins da Hípica">
+                            <Link href="/imoveis" className="text-sm font-medium text-secondary hover:underline hidden sm:block" title="Ver todas as plantas e imóveis Jardim da Hípica">
                                 Ver todas as plantas &rarr;
                             </Link>
                         </div>
@@ -219,14 +219,14 @@ export default function PropertyDetailsPage({ params }: Props) {
                                 <Link
                                     key={p.slug}
                                     href={`/imoveis/${p.slug}`}
-                                    title={`Ver detalhes e diferenciais da ${p.title} - Jardins da Hípica`}
+                                    title={`Ver detalhes e diferenciais da ${p.title} - Jardim da Hípica`}
                                     className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
                                 >
                                     <div className="relative aspect-[4/3] bg-muted overflow-hidden">
                                         <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors z-10" />
                                         <Image
                                             src={p.images[0]}
-                                            alt={`Planta ${p.title} - Jardins da Hípica Lavvi`}
+                                            alt={`Planta ${p.title} - Jardim da Hípica Lavvi`}
                                             fill
                                             className="object-cover group-hover:scale-105 transition-transform duration-500"
                                         />
@@ -250,7 +250,7 @@ export default function PropertyDetailsPage({ params }: Props) {
                         </div>
                         <div className="mt-8 text-center sm:hidden">
                             <Button variant="outline" className="w-full h-12 rounded-xl border-gray-200" asChild>
-                                <Link href="/imoveis" title="Ver catálogo de imóveis Jardins da Hípica">Ver catálogo completo</Link>
+                                <Link href="/imoveis" title="Ver catálogo de imóveis Jardim da Hípica">Ver catálogo completo</Link>
                             </Button>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ export function Footer() {
                             <div className="h-8 w-8 bg-secondary rounded-full flex items-center justify-center">
                                 <span className="text-primary font-serif font-bold text-lg">L</span>
                             </div>
-                            <span className="text-2xl font-serif text-white font-bold tracking-tight">Jardins da Hípica</span>
+                            <span className="text-2xl font-serif text-white font-bold tracking-tight">Jardim da Hípica</span>
                         </div>
                         <p className="text-gray-400 font-light leading-relaxed max-w-xs">
                             O encontro perfeito entre a natureza e a sofisticação urbana. Um oásis particular em frente à Hípica Santo Amaro.
@@ -93,7 +93,7 @@ export function Footer() {
                 </div>
                 <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-light">
-                        <p>&copy; {new Date().getFullYear()} Jardins da Hípica. Todos os direitos reservados.</p>
+                        <p>&copy; {new Date().getFullYear()} Jardim da Hípica. Todos os direitos reservados.</p>
                         <div className="flex gap-6">
                             <Link href="/privacidade" className="hover:text-secondary transition-colors">Política de Privacidade</Link>
                             <Link href="/termos" className="hover:text-secondary transition-colors">Termos de Uso</Link>

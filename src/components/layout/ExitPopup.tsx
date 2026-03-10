@@ -26,7 +26,7 @@ export function ExitPopup() {
     }, [hasTriggered]);
 
     const whatsappNumber = "5511978519899";
-    const whatsappMessage = "Olá, gostaria de aproveitar a condição especial do Jardins da Hípica.";
+    const whatsappMessage = "Olá, gostaria de aproveitar a condição especial do Jardim da Hípica.";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
     if (!isVisible) return null;

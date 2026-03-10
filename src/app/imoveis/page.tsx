@@ -8,8 +8,8 @@ import { BedDouble, Bath, Car, ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
-    title: "Plantas e Tipologias | Jardins da Hípica",
-    description: "Conheça as opções de plantas do Jardins da Hípica: 84m² a 276m².",
+    title: "Plantas e Tipologias | Jardim da Hípica",
+    description: "Conheça as opções de plantas do Jardim da Hípica: 84m² a 276m².",
 };
 
 export default function ImoveisPage() {
@@ -22,7 +22,7 @@ export default function ImoveisPage() {
                             Plantas Exclusivas
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-                            Escolha a planta ideal para o seu estilo de vida no Jardins da Hípica.
+                            Escolha a planta ideal para o seu estilo de vida no Jardim da Hípica.
                         </p>
                     </FadeIn>
                 </div>

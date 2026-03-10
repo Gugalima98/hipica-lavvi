@@ -43,7 +43,7 @@ export function Location() {
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="Mapa de Localização Jardins da Hípica"
+                            title="Mapa de Localização Jardim da Hípica"
                         ></iframe>
                     </div>
                 </div>

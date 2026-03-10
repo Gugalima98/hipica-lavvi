@@ -28,7 +28,7 @@ import { BigNumbers } from "@/components/sections/BigNumbers";
 import { ServiceEcosystem } from "@/components/sections/ServiceEcosystem";
 
 export const metadata: Metadata = {
-    title: "O Empreendimento | Jardins da Hípica - Lazer de Clube",
+    title: "O Empreendimento | Jardim da Hípica - Lazer de Clube",
     description: "Um resort urbano com mais de 50 itens de lazer, assessoria esportiva completa e serviços exclusivos.",
 };
 
@@ -83,7 +83,7 @@ export default function EmpreendimentoPage() {
                                 Grandiosidade e <span className="italic text-secondary">Natureza</span>
                             </h1>
                             <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-                                O Jardins da Hípica redefine o conceito de morar bem em São Paulo. Um projeto único que une a sofisticação da Lavvi com a tranquilidade da natureza.
+                                O Jardim da Hípica redefine o conceito de morar bem em São Paulo. Um projeto único que une a sofisticação da Lavvi com a tranquilidade da natureza.
                             </p>
                         </FadeIn>
                     </div>
