@@ -26,9 +26,10 @@ export function AboutTeaser() {
                         <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl sm:aspect-[2/1] lg:aspect-auto lg:h-[500px]">
                             <Image
                                 src="/images/perspectiva_ilustrada_do_transfer_lobby.webp"
-                                alt="Jardim da Hípica - Lobby de Transfer Sofisticado"
+                                alt="Jardins da hípica lavvi - Perspectiva Ilustrada do Transfer Lobby"
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </div>
                     </div>

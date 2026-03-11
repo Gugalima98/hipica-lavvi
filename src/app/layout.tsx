@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     default: "Jardim da Hípica Lavvi | Oásis Urbano em Santo Amaro",
     template: "%s | Jardim da Hípica Lavvi",
   },
-  description: "Lançamento exclusivo Jardim da Hípica Lavvi em frente à Hípica Santo Amaro. Apartamentos de 84m² a 276m² com vista eterna e lazer de clube. Antecipe-se.",
-  keywords: ["Jardim da hípica", "Jardim da hípica lavvi", "Jardim da hípica", "Jardim da Hípica", "Lavvi Santo Amaro", "Apartamento Chácara Santo Antônio", "Lançamento Imobiliário SP"],
+  description: "Lançamento exclusivo Jardim da Hípica Lavvi (Jardins da Hípica) em frente à Hípica Santo Amaro. Apartamentos de 84m² a 276m² com vista eterna e lazer de clube. Antecipe-se.",
+  keywords: ["jardim da hipica", "jardins da hipica lavvi", "jardins da hipica", "jardins da hípica", "Jardim da Hípica Lavvi", "Lavvi Santo Amaro", "Apartamento Chácara Santo Antônio", "Lançamento Imobiliário SP"],
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -98,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -119,7 +119,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={cn(inter.variable, playfair.variable, "font-sans antialiased bg-background text-foreground selection:bg-secondary selection:text-secondary-foreground")}>
+      <body className={cn(inter.variable, playfair.variable, "font-sans antialiased bg-background text-foreground selection:bg-secondary selection:text-secondary-foreground")} suppressHydrationWarning>
         <FloatingNav />
         <Header />
         <main className="min-h-screen flex flex-col">

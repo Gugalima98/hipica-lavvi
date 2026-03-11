@@ -13,7 +13,10 @@ interface FloorPlan {
     label: string;
     description: string;
     features: string[];
-    image: string;
+    images: {
+        tipo: string;
+        opcao?: string;
+    };
     slug: string;
 }
 
@@ -29,7 +32,10 @@ const floorPlans: FloorPlan[] = [
             "Dependência Completa",
             "4 Vagas Determinadas"
         ],
-        image: "/images/plantas/jardins-da-hipica-lavvi-planta-276m-torre-a.jpg",
+        images: {
+            tipo: "/images/plantas-novas/apto-ta-final-1-276m-tipo-ef.webp",
+            opcao: "/images/plantas-novas/apto-ta-final-1-276m-opcao-ef2.webp"
+        },
         slug: "torre-a-276m",
     },
     {
@@ -43,7 +49,10 @@ const floorPlans: FloorPlan[] = [
             "Lavabo Social",
             "3 Vagas"
         ],
-        image: "/images/plantas/jardins-da-hipica-lavvi-planta-223m-torre-d.jpg",
+        images: {
+            tipo: "/images/plantas-novas/apto-td-final-2-223m-tipo-ef2.webp",
+            opcao: "/images/plantas-novas/apto-td-final-2-223m-opcao-ef2.webp"
+        },
         slug: "torre-d-223m",
     },
     {
@@ -57,7 +66,10 @@ const floorPlans: FloorPlan[] = [
             "Banho de Serviço",
             "2 Vagas"
         ],
-        image: "/images/plantas/jardins-da-hipica-lavvi-planta-184m-torre-d.jpg",
+        images: {
+            tipo: "/images/plantas-novas/apto-td-final-3-184m-tipo-ef.webp",
+            opcao: "/images/plantas-novas/apto-td-final-3-184m-opcao-ef2.webp"
+        },
         slug: "torre-d-184m",
     },
     {
@@ -71,12 +83,15 @@ const floorPlans: FloorPlan[] = [
             "Entrada Social e Serviço",
             "3 Vagas"
         ],
-        image: "/images/plantas/jardins-da-hipica-lavvi-planta-180m-torre-a.jpg",
+        images: {
+            tipo: "/images/plantas-novas/apto-ta-final-3-180m-tipo-ef.webp",
+            opcao: "/images/plantas-novas/apto-ta-final-3-180m-opcao-ef.webp"
+        },
         slug: "torre-a-180m",
     },
     {
         id: "170m",
-        label: "170m²",
+        label: "171m²",
         description: "Torre C | 4 Dorms | Hall Semiprivativo",
         features: [
             "Amplo Living",
@@ -85,12 +100,15 @@ const floorPlans: FloorPlan[] = [
             "Cozinha Espaçosa",
             "2 Vagas"
         ],
-        image: "/images/plantas/jardins-da-hipica-lavvi-planta-170m-torre-c.jpg",
+        images: {
+            tipo: "/images/plantas-novas/apto-tc-final-8-171m-tipo-ef2.webp",
+            opcao: "/images/plantas-novas/apto-tc-final-8-171m-opcao-p3.webp"
+        },
         slug: "torre-c-170m",
     },
     {
         id: "149m",
-        label: "149m²",
+        label: "150m²",
         description: "Torre B | 3 Suítes | Hall Semiprivativo",
         features: [
             "Living Integrado",
@@ -99,12 +117,15 @@ const floorPlans: FloorPlan[] = [
             "Suíte Master Confortável",
             "2 Vagas"
         ],
-        image: "/images/plantas/jardins-da-hipica-lavvi-planta-149m-torre-b.jpg",
+        images: {
+            tipo: "/images/plantas-novas/apto-tb-final-6-150m-tipo-ef2.webp",
+            opcao: "/images/plantas-novas/apto-tb-final-6-150m-opcao-ef.webp"
+        },
         slug: "torre-b-149m",
     },
     {
         id: "133m",
-        label: "133m²",
+        label: "133m/134m²",
         description: "Torre B/C | 3 Suítes",
         features: [
             "Planta Versátil",
@@ -113,7 +134,10 @@ const floorPlans: FloorPlan[] = [
             "Cozinha Americana (Opcional)",
             "2 Vagas"
         ],
-        image: "/images/plantas/jardins-da-hipica-lavvi-planta-133m-torre-c.jpg",
+        images: {
+            tipo: "/images/plantas-novas/apto-tb-final-3-133m-tipo-ef2.webp",
+            opcao: "/images/plantas-novas/apto-tb-final-3-133m-opcao-ef2.webp"
+        },
         slug: "torre-c-133m",
     },
     {
@@ -127,13 +151,25 @@ const floorPlans: FloorPlan[] = [
             "Lavabo",
             "1 Vaga"
         ],
-        image: "/images/plantas/jardins-da-hipica-lavvi-planta-84m-torre-c.jpg",
+        images: {
+            tipo: "/images/plantas-novas/apto-tb-final-5-84m-tipo-ef2.webp",
+            opcao: "/images/plantas-novas/apto-tb-final-5-84m-opcao-ef2.webp"
+        },
         slug: "torre-c-84m",
     },
 ];
 
 export function FloorPlans() {
     const [selectedPlan, setSelectedPlan] = useState(floorPlans[0]);
+    const [isOptionView, setIsOptionView] = useState(false);
+
+    // Reset option view when changing plan if option doesn't exist
+    const handlePlanChange = (plan: FloorPlan) => {
+        setSelectedPlan(plan);
+        if (!plan.images.opcao) {
+            setIsOptionView(false);
+        }
+    };
 
     return (
         <section className="py-24 bg-white relative overflow-hidden" id="plantas">
@@ -157,7 +193,7 @@ export function FloorPlans() {
                     {floorPlans.map((plan) => (
                         <button
                             key={plan.id}
-                            onClick={() => setSelectedPlan(plan)}
+                            onClick={() => handlePlanChange(plan)}
                             className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 border ${selectedPlan.id === plan.id
                                 ? "bg-primary text-white border-primary shadow-lg scale-105"
                                 : "bg-white text-gray-600 border-gray-200 hover:border-primary/50 hover:text-primary"
@@ -176,17 +212,38 @@ export function FloorPlans() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4 }}
-                        className="grid lg:grid-cols-2 gap-12 items-center bg-gray-50 rounded-3xl p-8 lg:p-12 border border-gray-100 shadow-sm"
+                        className="grid lg:grid-cols-2 gap-12 items-start bg-gray-50 rounded-3xl p-8 lg:p-12 border border-gray-100 shadow-sm"
                     >
                         {/* Image Side */}
-                        <div className="relative aspect-[4/3] bg-white rounded-2xl overflow-hidden shadow-inner border border-gray-100 flex items-center justify-center group">
+                        <div className="flex flex-col gap-6">
+                            <div className="relative aspect-[4/3] bg-white rounded-2xl overflow-hidden shadow-inner border border-gray-100 flex items-center justify-center group p-4">
+                                <Image
+                                    src={isOptionView && selectedPlan.images.opcao ? selectedPlan.images.opcao : selectedPlan.images.tipo}
+                                    alt={`Planta de ${selectedPlan.label} - Jardim da Hípica`}
+                                    fill
+                                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    priority
+                                />
+                            </div>
 
-                            <Image
-                                src={selectedPlan.image}
-                                alt={`Planta de ${selectedPlan.label} - Jardim da Hípica`}
-                                fill
-                                className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                            />
+                            {/* View Toggle */}
+                            {selectedPlan.images.opcao && (
+                                <div className="flex justify-center bg-white p-2 rounded-xl border border-gray-200 shadow-sm mx-auto">
+                                    <button
+                                        className={`px-6 py-2 rounded-lg text-sm font-medium transition-colors ${!isOptionView ? 'bg-secondary text-white' : 'text-gray-500 hover:text-primary'}`}
+                                        onClick={() => setIsOptionView(false)}
+                                    >
+                                        Planta Padrão
+                                    </button>
+                                    <button
+                                        className={`px-6 py-2 rounded-lg text-sm font-medium transition-colors ${isOptionView ? 'bg-secondary text-white' : 'text-gray-500 hover:text-primary'}`}
+                                        onClick={() => setIsOptionView(true)}
+                                    >
+                                        Opção Modificada
+                                    </button>
+                                </div>
+                            )}
                         </div>
 
                         {/* Details Side */}

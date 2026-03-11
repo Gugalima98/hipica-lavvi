@@ -47,11 +47,15 @@ export function Footer() {
                                         </Link>
                                     </li>
                                     <li>
+                                        <Link href="/galeria" className="text-sm leading-6 text-white/80 hover:text-white">
+                                            Galeria Completa
+                                        </Link>
+                                    </li>
+                                    <li>
                                         <Link href="/sobre" className="text-sm leading-6 text-white/80 hover:text-white">
                                             Sobre a Lavvi
                                         </Link>
                                     </li>
-
                                 </ul>
                             </div>
                             <div className="mt-10 md:mt-0">

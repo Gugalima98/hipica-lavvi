@@ -7,12 +7,12 @@ import { X, ZoomIn } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const images = [
-    { src: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop", alt: "Fachada imponente ao entardecer", span: "row-span-2 col-span-2" },
-    { src: "https://images.unsplash.com/photo-1600596542815-e32caca73783?q=80&w=1200&auto=format&fit=crop", alt: "Living ampliado com vista panorâmica", span: "row-span-1 col-span-1" },
-    { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop", alt: "Suíte Master com closet", span: "row-span-1 col-span-1" },
-    { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop", alt: "Área Gourmet integrada", span: "row-span-1 col-span-2" },
-    { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop", alt: "Piscina com borda infinita", span: "row-span-2 col-span-1" },
-    { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop", alt: "Lobby com pé-direito duplo", span: "row-span-1 col-span-1" },
+    { src: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop", alt: "Fachada imponente ao entardecer no Jardim da Hipica Lavvi", span: "row-span-2 col-span-2" },
+    { src: "https://images.unsplash.com/photo-1600596542815-e32caca73783?q=80&w=1200&auto=format&fit=crop", alt: "Living ampliado com vista panorâmica - Jardins da hipica", span: "row-span-1 col-span-1" },
+    { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop", alt: "Suíte Master com closet - Jardim da Hípica", span: "row-span-1 col-span-1" },
+    { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop", alt: "Área Gourmet integrada do Jardins da hípica lavvi", span: "row-span-1 col-span-2" },
+    { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop", alt: "Piscina com borda infinita do empreendimento Jardim da Hipica", span: "row-span-2 col-span-1" },
+    { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop", alt: "Lobby com pé-direito duplo - Jardins da hipica", span: "row-span-1 col-span-1" },
 ];
 
 export function Gallery() {
@@ -89,6 +89,9 @@ export function Gallery() {
                                 alt="Visualização ampliada"
                                 fill
                                 className="object-contain"
+                                sizes="100vw"
+                                priority
+                                quality={100}
                             />
                         </motion.div>
                     </motion.div>

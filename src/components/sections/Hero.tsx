@@ -18,14 +18,25 @@ export function Hero() {
             >
                 <Image
                     src="/images/jardins-da-hipica-lavvi-fachada.webp"
-                    alt="Jardim da Hípica Lavvi - Vista aérea do complexo em Santo Amaro com piscinas e área verde"
+                    alt="Jardim da Hípica Lavvi - Vista aérea do complexo em Santo Amaro com piscinas e área verde (Jardins da hípica)"
                     fill
-                    className="object-cover"
+                    className="object-cover md:hidden"
                     priority
                     fetchPriority="high"
                     sizes="100vw"
                     quality={75}
                 />
+
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster="/images/jardins-da-hipica-lavvi-fachada.webp"
+                    className="hidden md:block absolute inset-0 w-full h-full object-cover"
+                >
+                    <source src="/videos/hero-conceitual.mp4" type="video/mp4" />
+                </video>
                 {/* Advanced Gradient Overlay for maximum readability */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />

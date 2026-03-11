@@ -90,6 +90,7 @@ export default function AboutPage() {
                                     alt="Lavvi - Excelência e Alto Padrão"
                                     fill
                                     className="object-cover"
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
                                 />
                             </FadeIn>
                         </div>
