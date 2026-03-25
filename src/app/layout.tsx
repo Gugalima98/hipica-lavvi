@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     default: "Jardim da Hípica Lavvi | Oásis Urbano em Santo Amaro",
     template: "%s | Jardim da Hípica Lavvi",
   },
-  description: "Lançamento exclusivo Jardim da Hípica Lavvi (Jardins da Hípica) em frente à Hípica Santo Amaro. Apartamentos de 84m² a 276m² com vista eterna e lazer de clube. Antecipe-se.",
+  description: "Lançamento exclusivo Jardim da Hípica Lavvi em frente à Hípica Santo Amaro. Apartamentos de 84m² a 276m² com vista eterna e lazer de clube. Antecipe-se.",
   keywords: ["jardim da hipica", "jardins da hipica lavvi", "jardins da hipica", "jardins da hípica", "Jardim da Hípica Lavvi", "Lavvi Santo Amaro", "Apartamento Chácara Santo Antônio", "Lançamento Imobiliário SP"],
   openGraph: {
     type: "website",

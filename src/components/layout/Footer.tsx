@@ -80,7 +80,7 @@ export function Footer() {
                                 <ul role="list" className="mt-6 space-y-4">
                                     <li className="text-sm leading-6 text-white/80">
                                         <strong className="block text-white">Endereço:</strong>
-                                        Av. João Dias, 1084 | Clube Hípico de Santo Amaro
+                                        R. Antônio Bandeira, 129 - Alto da Boa Vista
                                     </li>
                                     <li className="text-sm leading-6 text-white/80">
                                         <strong className="block text-white">Telefone:</strong>

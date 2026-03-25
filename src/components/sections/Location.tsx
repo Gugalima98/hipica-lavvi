@@ -8,7 +8,7 @@ export function Location() {
                     <div className="lg:order-2">
                         <h2 className="text-base font-semibold leading-7 text-secondary">Localização Privilegiada</h2>
                         <p className="mt-2 text-3xl font-serif font-bold tracking-tight text-primary sm:text-4xl">
-                            No Coração da Chácara Santo Antônio
+                            No Coração do Alto da Boa Vista
                         </p>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
                             Viva ao lado do Clube Hípico de Santo Amaro e desfrute de uma região arborizada, segura e completa. Próximo a escolas internacionais, shoppings e com fácil acesso aos principais eixos de negócios da cidade.
@@ -36,7 +36,7 @@ export function Location() {
                     <div className="lg:order-1 h-[400px] w-full rounded-2xl overflow-hidden shadow-lg bg-gray-200">
                         {/* Google Maps Embed Placeholder */}
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.672620786576!2d-46.7099!3d-23.6161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM2JzU4LjAiUyA0NsKwNDInMzUuNiJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.2033!2d-46.703!3d-23.627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50e8544f808f%3A0x6bba3c2b0c3f0c3a!2sR.%20Ant%C3%B4nio%20Bandeira%2C%20129%20-%20Vila%20Cruzeiro%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004731-000!5e0!3m2!1spt-BR!2sbr!4v1711380000000!5m2!1spt-BR!2sbr"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
